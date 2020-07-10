@@ -1,0 +1,10 @@
+/* 
+  InfoPlist.strings
+
+  Created by Quatix on 29/11/17.
+  Copyright © 2017 BigXSoft. All rights reserved.
+*/
+
+CFBundleDisplayName = "Dictionnaire Plus";
+CFBundleName = "Dictionnaire Plus";
+CFBundleExecutable = "Dictionnaire Plus";

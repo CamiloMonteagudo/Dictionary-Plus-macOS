@@ -9,9 +9,10 @@
 #import "AppData.h"
 
 //===================================================================================================================================================
-int LGSrc = -1;
-int LGDes = -1;
-int iUser = 0;
+int LGSrc    = -1;
+int LGDes    = -1;
+int iUser    = 0;
+int nBuyDays = -1;
 
 __strong DictMain*     Dict;
 __strong DictIndexes*  DictIdx;
@@ -35,6 +36,10 @@ NSColor* SelColor  = [NSColor colorWithCalibratedRed:0.9 green:0.98 blue:1   alp
 NSColor* SustColor = [NSColor colorWithCalibratedRed:0.95 green:0.95  blue:0.95 alpha:1];
 NSColor* BackColor = [NSColor colorWithCalibratedRed:1.0 green:1.0  blue:1.0 alpha:1];
 
+NSColor* MsgBkgColor  = [NSColor colorWithCalibratedRed:1.0 green:1.0  blue:0.95 alpha:1];
+NSColor* MsgTxtColor  = [NSColor colorWithCalibratedRed:0.6 green:0.0  blue:0.00 alpha:1];
+NSColor* MsgSelColor  = [NSColor colorWithCalibratedRed:1.0 green:1.0  blue:0.85 alpha:1];
+
 //===================================================================================================================================================
 // Abreviatura de de los idiomas segun el codigo ISO
 static NSString *_AbrvLng[] = { @"Es", @"En", @"It", @"Fr" };
@@ -57,68 +62,14 @@ static NSString * _LngFlags[LGCount] =  {@"🇪🇸", @"🇺🇸", @"🇮🇹", 
 //---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 // DEFINE LOS DICCIONARIOS Y CONJUGACIONES INSTALADOS
 
-//                         EnEs, EnIt, EnFr, EsEn, EsIt, EsFr, ItEs, ItEn, ItFr, FrEs, FrEn, FrIt
-//static int _InstSrc[] = {   1,    1,    1,    0,    0,    0,    2,    2,    2,    3,    3,    3 };
-//static int _InstDes[] = {   0,    2,    3,    1,    2,    3,    0,    1,    3,    0,    1,    2 };
+//                       EnEs, EnIt, EnFr, EsEn, EsIt, EsFr, ItEs, ItEn, ItFr, FrEs, FrEn, FrIt
+static int _InstSrc[] = {   1,    1,    1,    0,    0,    0,    2,    2,    2,    3,    3,    3 };
+static int _InstDes[] = {   0,    2,    3,    1,    2,    3,    0,    1,    3,    0,    1,    2 };
 
-// Paquete de Italiano
-//                        ItEs, ItEn, ItFr, EsIt, EnIt, FrIt
-static int _InstSrc[]  = {   2,    2,    2,    0,    1,    3, };
-static int _InstDes[]  = {   0,    1,    3,    2,    2,    2, };
-static int _InstConj[] = { 0, 1, 2, 3 };
+static int _InstConj[] ={ 0, 1, 2, 3 };
 
-// Paquete de Inglés
-//                         EsEn, EsIt, EsFr, EnEs, ItEs, FrEs
-//static int _InstSrc[]  = {   1,    1,    1,    0,    2,    3, };
-//static int _InstDes[]  = {   0,    2,    3,    1,    1,    1, };
-//static int _InstConj[] = { 0, 1, 2, 3 };
+//=========================================================================================================================================================
 
-// (En-Fr)
-//                         EnIt, ItEn
-//static int _InstSrc[]  = {   1,    3, };
-//static int _InstDes[]  = {   3,    1, };
-//static int _InstConj[] = {   1,    3  };
-
-// (En-It)
-//                         EnIt, ItEn
-//static int _InstSrc[]  = {   1,    2, };
-//static int _InstDes[]  = {   2,    1, };
-//static int _InstConj[] = {   1,    2  };
-
-// Paquete de Español
-//                         EsEn, EsIt, EsFr, EnEs, ItEs, FrEs
-//static int _InstSrc[]  = {   0,    0,    0,    1,    2,    3, };
-//static int _InstDes[]  = {   1,    2,    3,    0,    0,    0, };
-//static int _InstConj[] = { 0, 1, 2, 3 };
-
-/* (En-Es)
-//                        EnEs, EsEn
-static int _InstSrc[]  = {   1,    0 };
-static int _InstDes[]  = {   0,    1 };
-
-//                        Es, En
-static int _InstConj[] = { 0, 1 };
-*/
-
-/*
-// (Es-It)
-//                        EsIt,  ItEs
-static int _InstSrc[]  = {   0,    2 };
-static int _InstDes[]  = {   2,    0 };
-
-//                        Es, It
-static int _InstConj[] = { 0, 2 };
-*/
-
-/*// (Es-Fr)
-//                        EsFr,  FrEs
-static int _InstSrc[]  = {   0,    3 };
-static int _InstDes[]  = {   3,    0 };
-//                        Es, It
-static int _InstConj[] = { 0, 3 };
-*/
-
-//---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 int DIRCount()
   {
   return sizeof(_InstSrc)/sizeof(_InstSrc[0]);
@@ -162,7 +113,7 @@ NSString* LGName( int lng )
 
 //---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 // Obtiene el nombre de la dirección de traducción con indice 'iDir'
-NSString* DIRName( int iDir )
+NSString* DIRName( int iDir, BOOL noFlags, BOOL noSpace )
   {
   if( iDir<0 || iDir>DIRCount() ) return @"";
   
@@ -171,7 +122,15 @@ NSString* DIRName( int iDir )
   
   NSString* sSrc = _LngNames[iUser][iSrc];
   NSString* sDes = _LngNames[iUser][iDes];
+  if( noSpace )
+    {
+    sSrc = [sSrc stringByTrimmingCharactersInSet: NSCharacterSet.whitespaceCharacterSet ];
+    sDes = [sDes stringByTrimmingCharactersInSet: NSCharacterSet.whitespaceCharacterSet ];
+    }
 
+  if( noFlags )
+    return [NSString stringWithFormat:@"%@ ➔ %@", sSrc, sDes];
+  
   NSString* flgSrc = _LngFlags[iSrc];
   NSString* flgDes = _LngFlags[iDes];
   
@@ -320,6 +279,46 @@ NSString* MainDictName( int src, int des )
   {
   NSString* Sufix = DIRAbrv( src, des );
   return [Sufix stringByAppendingString:@".dcv"];
+  }
+
+//--------------------------------------------------------------------------------------------------------------------------------------------------------
+// Procesa todos los mensajes que hay en la cola
+void WaitMsg()
+  {
+  [[NSRunLoop currentRunLoop] runMode:NSDefaultRunLoopMode beforeDate: [NSDate date] ];   // Procesa los mensajes
+  }
+
+//--------------------------------------------------------------------------------------------------------------------------------------------------------
+// Obtiene una cadena con el diccionario resaltado
+NSAttributedString* MsgForDir( NSString* locStr, int Dir )
+  {
+  NSString*     s  = NSLocalizedString(locStr, nil);
+  CGFloat FontSize = [NSFont systemFontSize];
+  
+  NSFont* fontReg   = [NSFont systemFontOfSize:     FontSize+1];                                       // Fuente para los significados
+  NSFont* fontBold  = [NSFont boldSystemFontOfSize: FontSize+1];                                       // Fuente para los textos resaltados dentro del significado
+  
+  NSDictionary* attrTxt = @{ NSFontAttributeName:fontReg , NSForegroundColorAttributeName:MsgTxtColor };
+  NSDictionary* attrDir = @{ NSFontAttributeName:fontBold, NSForegroundColorAttributeName:MsgTxtColor };
+
+  NSRange rg = [s rangeOfString:@"{DIR}"];
+  if( rg.length == 0 )
+    return [[NSAttributedString alloc] initWithString: s attributes:attrTxt];;
+
+  NSString* sIni = [s substringToIndex:rg.location];
+  NSString* sEnd = [s substringFromIndex: rg.location+rg.length ];
+  
+  NSString* sDir = DIRName(Dir, TRUE, TRUE);
+
+  NSMutableAttributedString* strIni = [[NSMutableAttributedString alloc] initWithString: sIni attributes:attrTxt];
+  
+  NSAttributedString* strEnd = [[NSAttributedString alloc] initWithString: sEnd attributes:attrTxt];
+  NSAttributedString* strDir = [[NSAttributedString alloc] initWithString: sDir attributes:attrDir];
+
+  [strIni appendAttributedString: strDir];
+  [strIni appendAttributedString: strEnd];
+  
+  return strIni;
   }
 
 

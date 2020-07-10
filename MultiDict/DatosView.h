@@ -58,6 +58,7 @@
 - (void) CopyText;
 - (void) SelectedDatos;
 - (void) SustWords;
+- (void) UnSelectedDatos;
 
 @end
 

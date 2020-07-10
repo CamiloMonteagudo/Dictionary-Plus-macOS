@@ -1,6 +1,6 @@
 "UILang" = "2";
 
-"WinTitle"       = "Dictionary Plus";
+"WinTitle"       = "Dizionario Plus";
 "TitleFindMeans" = "Cercando significati";
 "NoFindWrd"      = "La parola non è nel dizionario";
 "NoFindWrdEntry" = "No c'è un entrata su il dizionario per quella parola";
@@ -72,4 +72,33 @@
 "Color"        = "Colore";
 "Enfermedad"   = "Malattia";
 
+"DictsInclud"  = "Include dizionari:";
+
+"ProdAll" = "Tutti i dizionari";
+"PackEs"  = "Pacchetto Spagnolo";
+"PackEn"  = "Pacchetto Inglese";
+"PackIt"  = "Pacchetto Italiano";
+"PackFr"  = "Pacchetto Francese";
+"ParEnEs" = "Inglese e Spagnolo";
+"ParEnIt" = "Inglese e Italiano";
+"ParEnFr" = "Inglese e Francese";
+"ParEsIt" = "Spagnolo e Italiano";
+"ParEsFr" = "Spagnolo e Francese";
+"ParItFr" = "Italiano e Francese";
+
+"PurhaseMsg1" = "Ci sono {ND} giorni per provare il dizionario, se vuoi ottenerlo, fai clic sul pulsante 'Acquistare'.";
+"PurhaseMsg2" = "Il periodo di prova è finito, per usare il dizionario è necessario acquistarlo.";
+"NoLoadDict"  = "Il dizionario non può essere caricato.";
+
+"DictBuyMsg1" = "Il dizionario {DIR} non è stato acquistato, il suo funzionamento è limitato.";
+"DictBuyMsg2" = "Per vedere questo risultato, è necessario acquistare il dizionario {DIR}.";
+"BuyTooltip"  = "Mostra una vista per acquistare il dizionario.";
+"BtnComprar"  = "Acquistare";
+
+"TransError" = "Si è verificato un errore nella transazione";
+"NoAppStore" = "Non è stato possibile connettersi all'App Store.";
+"TitleError" = "Errore negli acquisti nell'applicazione";
+"RequestInfoError" = "Non è stato possibile ottenere informazioni sui prodotti dall'App Store.\r\nTi piacerebbe riprovare?";
+"No" = "No";
+"Si" = "Sí";
 

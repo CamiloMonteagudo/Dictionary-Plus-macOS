@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VariablesViewState
+   version = "1.0">
+   <ContextStates>
+      <ContextState
+         contextName = "EncodeData():AppData.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "code[10]">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "::-[BuyMsgView ResizeWithWidth:](CGFloat):BuyMsgView.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "lbMsg.frame">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+   </ContextStates>
+</VariablesViewState>

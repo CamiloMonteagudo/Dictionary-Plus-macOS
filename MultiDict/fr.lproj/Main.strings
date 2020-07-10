@@ -2,8 +2,8 @@
 /* Class = "NSTextFieldCell"; title = "Meanings"; ObjectID = "01K-Zo-5y3"; */
 "01K-Zo-5y3.title" = "Significations";
 
-/* Class = "NSMenuItem"; title = "Translation Dictionary"; ObjectID = "1Xt-HY-uBw"; */
-"1Xt-HY-uBw.title" = "Dictionary Plus (Italian Pack)";
+/* Class = "NSMenuItem"; title = "Dictionary Plus"; ObjectID = "1Xt-HY-uBw"; */
+"1Xt-HY-uBw.title" = "Dictionnaire Plus";
 
 /* Class = "NSMenu"; title = "Find"; ObjectID = "1b7-l0-nxx"; */
 "1b7-l0-nxx.title" = "Rechercher";
@@ -23,14 +23,17 @@
 /* Class = "NSMenuItem"; title = "Find"; ObjectID = "4EN-yA-p0u"; */
 "4EN-yA-p0u.title" = "Rechercher";
 
-/* Class = "NSMenuItem"; title = "Quit Translation Dictionary"; ObjectID = "4sb-4s-VLi"; */
-"4sb-4s-VLi.title" = "Quitter Dictionary Plus (Italian Pack)";
+/* Class = "NSMenuItem"; title = "Quit Dictionary Plus"; ObjectID = "4sb-4s-VLi"; */
+"4sb-4s-VLi.title" = "Quitter Dictionnaire Plus";
 
 /* Class = "NSMenuItem"; title = "Edit"; ObjectID = "5QF-Oa-p0T"; */
 "5QF-Oa-p0T.title" = "Édition";
 
-/* Class = "NSMenuItem"; title = "About Translation Dictionary"; ObjectID = "5kV-Vb-QxS"; */
-"5kV-Vb-QxS.title" = "À propos de Dictionary Plus (Italian Pack)";
+/* Class = "NSMenuItem"; title = "About Dictionary Plus"; ObjectID = "5kV-Vb-QxS"; */
+"5kV-Vb-QxS.title" = "À propos de Dictionnaire Plus";
+
+/* Class = "NSTextFieldCell"; title = "Par Inglés -> Español"; ObjectID = "6W0-bW-jZB"; */
+"6W0-bW-jZB.title" = "Item";
 
 /* Class = "NSMenuItem"; title = "Redo"; ObjectID = "6dh-zS-Vam"; */
 "6dh-zS-Vam.title" = "Rétablir";
@@ -65,8 +68,14 @@
 /* Class = "NSMenuItem"; title = "Spelling and Grammar"; ObjectID = "Dv1-io-Yv7"; */
 "Dv1-io-Yv7.title" = "Orthographe et grammaire";
 
+/* Class = "NSTextFieldCell"; title = "In-app Purchases"; ObjectID = "ERr-4P-oAJ"; */
+"ERr-4P-oAJ.title" = "Achats dans l'application";
+
 /* Class = "NSMenu"; title = "Substitutions"; ObjectID = "FeM-D8-WVr"; */
 "FeM-D8-WVr.title" = "Substitutions";
+
+/* Class = "NSButton"; ibShadowedToolTip = "Show purchased dictionaries"; ObjectID = "FjP-g4-KEA"; */
+"FjP-g4-KEA.ibShadowedToolTip" = "Affiche les dictionnaires achetés";
 
 /* Class = "NSMenuItem"; title = "Text Replacement"; ObjectID = "HFQ-gK-NFA"; */
 "HFQ-gK-NFA.title" = "Remplacement de texte";
@@ -74,17 +83,32 @@
 /* Class = "NSMenuItem"; title = "Show Spelling and Grammar"; ObjectID = "HFo-cy-zxI"; */
 "HFo-cy-zxI.title" = "Afficher l'orthographe et la grammaire";
 
+/* Class = "NSButtonCell"; title = "Close"; ObjectID = "I0N-id-FIi"; */
+"I0N-id-FIi.title" = "Fermer";
+
 /* Class = "NSMenu"; title = "Window"; ObjectID = "I5i-to-Gcu"; */
 "I5i-to-Gcu.title" = "Fenêtre";
 
 /* Class = "NSWindow"; title = "Window"; ObjectID = "IQv-IB-iLA"; */
 "IQv-IB-iLA.title" = "Fenêtre";
 
+/* Class = "NSButtonCell"; title = "➔  Dictionaries"; ObjectID = "Ixf-hZ-Q0u"; */
+"Ixf-hZ-Q0u.title" = "➔  Dictionnaires";
+
 /* Class = "NSSearchFieldCell"; placeholderString = "Type a verb"; ObjectID = "JXY-ud-lt6"; */
 "JXY-ud-lt6.placeholderString" = "Ecrire un verbe";
 
+/* Class = "NSTableColumn"; headerCell.title = "Dictionary"; ObjectID = "JjG-xR-CML"; */
+"JjG-xR-CML.headerCell.title" = "Dictionnaire";
+
 /* Class = "NSMenuItem"; title = "Show All"; ObjectID = "Kd2-mp-pUS"; */
 "Kd2-mp-pUS.title" = "Tout afficher";
+
+/* Class = "NSMenuItem"; title = "Purchases ..."; ObjectID = "Kyd-x9-1mG"; */
+"Kyd-x9-1mG.title" = "Achats ...";
+
+/* Class = "NSTableColumn"; headerCell.title = "State"; ObjectID = "MS4-Lg-Pq5"; */
+"MS4-Lg-Pq5.headerCell.title" = "État";
 
 /* Class = "NSTextFieldCell"; placeholderString = "Type a Verb"; ObjectID = "Mpj-62-la9"; */
 "Mpj-62-la9.placeholderString" = "Ecrire un verbe";
@@ -98,14 +122,17 @@
 /* Class = "NSButton"; ibShadowedToolTip = "Clear all data of meanings"; ObjectID = "Nd3-kZ-Fxc"; */
 "Nd3-kZ-Fxc.ibShadowedToolTip" = "Effacer toutes les données de significations";
 
-/* Class = "NSMenuItem"; title = "Hide Translation Dictionary"; ObjectID = "Olw-nP-bQN"; */
-"Olw-nP-bQN.title" = "Masquer Dictionary Plus (Italian Pack)";
+/* Class = "NSMenuItem"; title = "Hide Dictionary Plus"; ObjectID = "Olw-nP-bQN"; */
+"Olw-nP-bQN.title" = "Masquer Dictionnaire Plus";
 
 /* Class = "NSMenuItem"; title = "Find Previous"; ObjectID = "OwM-mh-QMV"; */
 "OwM-mh-QMV.title" = "Rechercher précédent";
 
 /* Class = "NSMenuItem"; title = "Stop Speaking"; ObjectID = "Oyz-dy-DGm"; */
 "Oyz-dy-DGm.title" = "Arrêter la lecture";
+
+/* Class = "NSButtonCell"; title = "Buy"; ObjectID = "PpH-de-B7e"; */
+"PpH-de-B7e.title" = "Acheter";
 
 /* Class = "NSMenuItem"; title = "Select All"; ObjectID = "Ruw-6m-B2m"; */
 "Ruw-6m-B2m.title" = "Tout sélectionner";
@@ -128,6 +155,9 @@
 /* Class = "NSButton"; ibShadowedToolTip = "Show Verbs Conjugator"; ObjectID = "TeW-pO-Xd7"; */
 "TeW-pO-Xd7.ibShadowedToolTip" = "Afficher conjugueur de verbes";
 
+/* Class = "NSTableColumn"; headerCell.title = "Product"; ObjectID = "ToW-Ux-X0i"; */
+"ToW-Ux-X0i.headerCell.title" = "Produit";
+
 /* Class = "NSMenuItem"; title = "Capitalize"; ObjectID = "UEZ-Bs-lqG"; */
 "UEZ-Bs-lqG.title" = "Mettre la première lettre en majuscules";
 
@@ -149,14 +179,20 @@
 /* Class = "NSMenuItem"; title = "Paste and Match Style"; ObjectID = "WeT-3V-zwk"; */
 "WeT-3V-zwk.title" = "Coller et adapter le style";
 
+/* Class = "NSTextFieldCell"; title = "Connecting with the App Store"; ObjectID = "Wh2-zz-ZAo"; */
+"Wh2-zz-ZAo.title" = "Connexion avec l'App Store";
+
 /* Class = "NSSearchFieldCell"; placeholderString = "Type a Verb"; ObjectID = "XDZ-Fl-Y8t"; */
 "XDZ-Fl-Y8t.placeholderString" = "Ecrire un verbe";
 
 /* Class = "NSMenuItem"; title = "Window"; ObjectID = "XKX-tv-wzz"; */
 "XKX-tv-wzz.title" = "Fenêtre";
 
-/* Class = "NSMenuItem"; title = "Advanced Search"; ObjectID = "XoW-cp-mQx"; */
-"XoW-cp-mQx.title" = "Recherche avancée";
+/* Class = "NSTextFieldCell"; title = "Text Cell"; ObjectID = "XYG-Sj-BQW"; */
+"XYG-Sj-BQW.title" = "Text Cell";
+
+/* Class = "NSMenuItem"; title = "Advanced Search ..."; ObjectID = "XoW-cp-mQx"; */
+"XoW-cp-mQx.title" = "Recherche avancée ...";
 
 /* Class = "NSMenuItem"; title = "Find…"; ObjectID = "Xz5-n4-O0W"; */
 "Xz5-n4-O0W.title" = "Rechercher …";
@@ -185,6 +221,9 @@
 /* Class = "NSMenuItem"; title = "Use Selection for Find"; ObjectID = "buJ-ug-pKt"; */
 "buJ-ug-pKt.title" = "Rechercher sélection";
 
+/* Class = "NSTextFieldCell"; title = "Item"; ObjectID = "c3G-tT-ubw"; */
+"c3G-tT-ubw.title" = "Item";
+
 /* Class = "NSMenu"; title = "Transformations"; ObjectID = "c8a-y6-VQd"; */
 "c8a-y6-VQd.title" = "Transformations";
 
@@ -206,14 +245,17 @@
 /* Class = "NSTextFieldCell"; title = "Table View Cell"; ObjectID = "eOu-Js-Gf5"; */
 "eOu-Js-Gf5.title" = "Table View Cell";
 
-/* Class = "NSButton"; ibShadowedToolTip = "Copy selected or transted text"; ObjectID = "f9A-2g-pqJ"; */
-"f9A-2g-pqJ.ibShadowedToolTip" = "Copie texte sélectionné ou traduit";
+/* Class = "NSTextFieldCell"; title = "$89.99"; ObjectID = "flj-ff-dux"; */
+"flj-ff-dux.title" = "$89.99";
 
 /* Class = "NSMenuItem"; title = "Paste"; ObjectID = "gVA-U4-sdL"; */
 "gVA-U4-sdL.title" = "Coller";
 
 /* Class = "NSMenuItem"; title = "Enter Full Screen"; ObjectID = "hCl-xe-6Ky"; */
 "hCl-xe-6Ky.title" = "Entrer en plein écran";
+
+/* Class = "NSButtonCell"; title = "Restore Purchases"; ObjectID = "hNa-FO-HYn"; */
+"hNa-FO-HYn.title" = "Restaurer les achats";
 
 /* Class = "NSMenuItem"; title = "Smart Quotes"; ObjectID = "hQb-2v-fYv"; */
 "hQb-2v-fYv.title" = "Guillemets courbes";
@@ -230,6 +272,12 @@
 /* Class = "NSBox"; title = "Box"; ObjectID = "jVq-FI-tGO"; */
 "jVq-FI-tGO.title" = "Box";
 
+/* Class = "NSTextFieldCell"; title = "Text Cell"; ObjectID = "lBy-Ie-51D"; */
+"lBy-Ie-51D.title" = "Text Cell";
+
+/* Class = "NSButton"; ibShadowedToolTip = "Hide the message at the top of the windows"; ObjectID = "lWp-wA-LAQ"; */
+"lWp-wA-LAQ.ibShadowedToolTip" = "Masquer le message en haut de la fenêtre";
+
 /* Class = "NSTextFieldCell"; title = "Text Cell"; ObjectID = "lbK-KI-3PL"; */
 "lbK-KI-3PL.title" = "Text Cell";
 
@@ -245,8 +293,8 @@
 /* Class = "NSTextFieldCell"; title = "Table View Cell"; ObjectID = "pIO-5Y-kGc"; */
 "pIO-5Y-kGc.title" = "Table View Cell";
 
-/* Class = "NSMenuItem"; title = "Verb Conjugator"; ObjectID = "pV6-6W-2qo"; */
-"pV6-6W-2qo.title" = "Conjugueur de verbes";
+/* Class = "NSMenuItem"; title = "Verb Conjugator ..."; ObjectID = "pV6-6W-2qo"; */
+"pV6-6W-2qo.title" = "Conjugueur de verbes ...";
 
 /* Class = "NSMenuItem"; title = "Delete"; ObjectID = "pa3-QI-u2k"; */
 "pa3-QI-u2k.title" = "Supprimer";
@@ -259,9 +307,6 @@
 
 /* Class = "NSTextFieldCell"; title = "Conjugations"; ObjectID = "qnQ-s2-Wpw"; */
 "qnQ-s2-Wpw.title" = "Conjugaisons";
-
-/* Class = "NSButton"; ibShadowedToolTip = "Conjugates the selected word in the data area"; ObjectID = "r1N-nu-HCM"; */
-"r1N-nu-HCM.ibShadowedToolTip" = "Conjugue le mot sélectionné dans la zone de données";
 
 /* Class = "NSButton"; ibShadowedToolTip = "Find any of the words supplied instead of the selected"; ObjectID = "rO8-M7-tmb"; */
 "rO8-M7-tmb.ibShadowedToolTip" = "Rechercher l'un des mots fournis à la place du mot sélectionné";
@@ -296,8 +341,8 @@
 /* Class = "NSButtonCell"; title = "Show Only Entries with all Words"; ObjectID = "uEc-Tj-fk0"; */
 "uEc-Tj-fk0.title" = "Afficher uniquement les entrées avec tous les mots";
 
-/* Class = "NSMenu"; title = "Translation Dictionary"; ObjectID = "uQy-DD-JDr"; */
-"uQy-DD-JDr.title" = "Dictionary Plus (Italian Pack)";
+/* Class = "NSMenu"; title = "Dictionary Plus"; ObjectID = "uQy-DD-JDr"; */
+"uQy-DD-JDr.title" = "Dictionnaire Plus";
 
 /* Class = "NSMenuItem"; title = "Cut"; ObjectID = "uRl-iY-unG"; */
 "uRl-iY-unG.title" = "Couper";
@@ -320,8 +365,8 @@
 /* Class = "NSMenuItem"; title = "Speech"; ObjectID = "xrE-MZ-jX0"; */
 "xrE-MZ-jX0.title" = "Parole";
 
-/* Class = "NSButton"; ibShadowedToolTip = "Translates the selected word in the data area"; ObjectID = "y5y-aA-4vU"; */
-"y5y-aA-4vU.ibShadowedToolTip" = "Traduit le mot sélectionné dans la zone de données";
+/* Class = "NSTableColumn"; headerCell.title = "Price"; ObjectID = "yEY-wQ-ay0"; */
+"yEY-wQ-ay0.headerCell.title" = "Prix";
 
 /* Class = "NSMenuItem"; title = "Show Substitutions"; ObjectID = "z6F-FW-3nz"; */
 "z6F-FW-3nz.title" = "Afficher les substitutions";
@@ -331,6 +376,3 @@
 
 /* Class = "NSButton"; ibShadowedToolTip = "Closes view conjugations"; ObjectID = "zsx-EF-pnH"; */
 "zsx-EF-pnH.ibShadowedToolTip" = "Ferme la vue des conjugaisons";
-
-/* Class = "NSButton"; ibShadowedToolTip = "Delete the data of the meaning selected"; ObjectID = "zxd-bt-xSC"; */
-"zxd-bt-xSC.ibShadowedToolTip" = "Supprimer les données de la signification sélectionnée";

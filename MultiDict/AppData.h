@@ -31,16 +31,21 @@
 #define FULL_FRASE  0x0001
 #define VERB_UP     0x0002
 
-//===================================================================================================================================================
+#define DAYS_MAX    16
+#define DAYS_TEST   20
 
+//===================================================================================================================================================
+// Define tipos de datos para la búsqueda
 #define INT_LIST      NSMutableArray<NSNumber*>
 #define FOUNDS_ENTRY  NSMutableDictionary<NSNumber*,  INT_LIST*>
 #define GET_NUMBER(n) [NSNumber numberWithInt:n]
 
 //===================================================================================================================================================
-extern int  LGSrc;
-extern int  LGDes;
-extern int  iUser;
+
+extern int LGSrc;
+extern int LGDes;
+extern int iUser;
+extern int nBuyDays;
 
 extern DictMain*       Dict;
 extern DictIndexes*    DictIdx;
@@ -57,6 +62,9 @@ extern NSCharacterSet* TrimSpc;
 extern NSColor* SelColor;
 extern NSColor* SustColor;
 extern NSColor* BackColor;
+extern NSColor* MsgBkgColor;
+extern NSColor* MsgTxtColor;
+extern NSColor* MsgSelColor;
 
 //===================================================================================================================================================
 extern NSString*  LGFlag( int lng);
@@ -68,7 +76,7 @@ extern int       DIRDes( int iDir );
 extern int       DIRFromLangs(int src, int des);
 extern int       DIRFirst();
 extern int       DIRCount();
-extern NSString* DIRName( int iDir );
+extern NSString* DIRName( int iDir, BOOL noFlags, BOOL noSpace );
 extern NSString* DIRAbrv( int src, int des );
 
 extern int CNJCount();
@@ -83,6 +91,8 @@ extern BOOL IsLetter( NSInteger idx, NSString* Txt );
 extern int HexDigit(int idx, NSString* str );
 
 extern NSString* QuitaAcentos( NSString* wrd, int lng );
+extern void WaitMsg();
+extern NSAttributedString* MsgForDir( NSString* s, int Dir );
 
 //===================================================================================================================================================
 

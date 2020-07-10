@@ -9,6 +9,8 @@
 #import "AppDelegate.h"
 #import "AppData.h"
 #import "ViewController.h"
+#import "AppPurchases.h"
+#import "ProdsData.h"
 
 //===================================================================================================================================================
 @interface AppDelegate ()
@@ -21,15 +23,22 @@
 //===================================================================================================================================================
 @implementation AppDelegate
 
+- (instancetype)init
+  {
+  ReadAppData();
+  
+  return [super init];
+  }
 //--------------------------------------------------------------------------------------------------------------------------------------------------------
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
   {
-
+  [Purchases Initialize];
   }
 
 //--------------------------------------------------------------------------------------------------------------------------------------------------------
 - (void)applicationWillTerminate:(NSNotification *)aNotification
   {
+  [Purchases Remove];  // Evita que iOS mande mensajes a la aplicacion desdpues de terminada
   }
 
 //--------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -44,14 +53,13 @@
   return YES;
   }
 
-
 //--------------------------------------------------------------------------------------------------------------------------------------------------------
 // Se llama después de cargar el XIB files
 - (void)awakeFromNib
   {
-  [self LoadUserDefaults ];
-
   iUser = NSLocalizedString(@"UILang", nil).intValue;
+  
+  [self LoadUserDefaults ];
   }
 
 //--------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -79,7 +87,7 @@
   {
 //  NSString *AppName = [[NSProcessInfo processInfo] processName];
   
-  NSDictionary *Options = @{ @"ApplicationName":@"Dictionary Plus (Italian Pack)"};
+  NSDictionary *Options = @{ @"ApplicationName":@"Dictionary Plus"};
   
   [NSApp orderFrontStandardAboutPanelWithOptions:Options];
   }

@@ -143,6 +143,9 @@
 // Obtiene la palabra seleccionada y el idioma
 - (void) CheckSelectedData
   {
+  DatosView* selDatos = [ZoneDatosView SelectedDatosView];
+  if( !selDatos ) return;
+  
   NSButton* bntCj = BtnsData.BtnConjWord;
   NSButton* bntFw = BtnsData.BtnFindWord;
   
@@ -161,9 +164,7 @@
   
   if( lang==_des && [selTxt rangeOfCharacterFromSet:wrdSep].location == NSNotFound )
     {
-    int lng = [ZoneDatosView SelectedDatos].src;
-    
-    bntFw.title = LGFlag(lng);                                 // Pone la bandera del idioma
+    bntFw.title = LGFlag(selDatos.src);                                 // Pone la bandera del idioma
     bntFw.hidden = false;
     }
   }
@@ -222,6 +223,14 @@
   [self CheckSelectedData];
   
   [self setNeedsLayout:TRUE];
+  [self.superview resizeWithOldSuperviewSize: NSMakeSize(0, 0)];
+  }
+
+//--------------------------------------------------------------------------------------------------------------------------------------------------------
+// Se llama cuando los datos son deseleccionados los seleccionados
+- (void) UnSelectedDatos
+  {
+  [BtnsData HideButtons];
   }
 
 //--------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -232,6 +241,8 @@
   else                 _HSustMarks = -_HSustMarks;
 
   [ZoneDatosView SelectDatos:self];
+  
+  [self.superview resizeWithOldSuperviewSize: NSMakeSize(0, 0)];
   }
 
 static NSCharacterSet * Nums = [NSCharacterSet characterSetWithCharactersInString:@"1234567890"];
@@ -396,10 +407,10 @@ static NSCharacterSet * Nums = [NSCharacterSet characterSetWithCharactersInStrin
 
 //--------------------------------------------------------------------------------------------------------------------------------------------------------
 // Se llama cuando cambia la forma de los datos
-- (void)layout
-  {
-  [self.superview resizeWithOldSuperviewSize: NSMakeSize(0, 0)];
-  }
+//- (void)layout
+//  {
+//  [self.superview resizeWithOldSuperviewSize: NSMakeSize(0, 0)];
+//  }
 
 //--------------------------------------------------------------------------------------------------------------------------------------------------------
 // Dibuja el fondo de la zona

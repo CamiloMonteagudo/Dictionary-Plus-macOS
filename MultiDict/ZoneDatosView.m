@@ -8,8 +8,9 @@
 
 #import "ZoneDatosView.h"
 #import "AppData.h"
+#import "BuyMsgView.h"
 
-static DatosView* DatosSel;
+static NSView* DatosSel;
 
 //===================================================================================================================================================
 // Zona donde se muestran los datos de las palabras
@@ -33,8 +34,17 @@ static DatosView* DatosSel;
 // Adiciona los datos de la palabra 'Idx' en la parte superior de la zona de datos de palabras
 - (void) AddDatosAtIndex:(NSInteger)Idx
   {
-  CGFloat     w = self.superview.bounds.size.width;                  // Ancho del contenido del scroll
-  DatosView* Datos = [DatosView DatosForIndex:Idx With:w];           // Crea vista de datos nueva
+  CGFloat w = self.superview.bounds.size.width;                       // Ancho del contenido del scroll
+  
+  int resto = Idx % DAYS_TEST;
+  
+  //NSLog(@"Validación Idx=%ld  Dias=%d  Resto=%d", Idx, nBuyDays, resto );
+  
+  NSView* Datos;
+  if( nBuyDays < resto )
+    Datos = [DatosView DatosForIndex:Idx With:w];                    // Crea vista de datos nueva
+  else
+    Datos = [BuyMsgView BuyMsgWithWidth:w];                          // Crea vista de datos nueva
 
   Ctrller.btnDelAllDatos.hidden  = FALSE;                            // Habilita el botón para borrar los datos
   Ctrller.btnDelAllDatos.enabled = TRUE;      
@@ -66,9 +76,11 @@ static DatosView* DatosSel;
   NSInteger n = self.subviews.count;
   for( NSInteger i=n-1; i>=0; --i)
     {
-    DatosView* Sub  = self.subviews[i];
-
-    CGFloat hSub = [Sub ResizeWithWidth:w];
+    NSView* Sub  = self.subviews[i];
+    CGFloat hSub;
+    
+    if( [Sub isKindOfClass:DatosView.class] ) hSub = [(DatosView*) Sub ResizeWithWidth:w];
+    else                                      hSub = [(BuyMsgView*)Sub ResizeWithWidth:w];
 
     [Sub setFrameOrigin: NSMakePoint( 4, h)];
 
@@ -131,18 +143,41 @@ static DatosView* DatosSel;
 
 //--------------------------------------------------------------------------------------------------------------------------------------------------------
 // Pone los datos identificados por 'view' como datos seleccionados
-+(void) SelectDatos:(DatosView*) view
++(void) SelectDatos:(NSView*) view
   {
+  if( DatosSel!=nil )
+    {
+    if( [DatosSel isKindOfClass:DatosView.class] )
+      [(DatosView*)DatosSel UnSelectedDatos];
+    else
+      [(BuyMsgView*)DatosSel UnSelectedDatos];
+    }
+  
   DatosSel = view;
 
-  if( view!=nil ) [view SelectedDatos];
+  if( view!=nil )
+    {
+    if( [view isKindOfClass:DatosView.class] )
+      [(DatosView*)view SelectedDatos];
+    else
+      [(BuyMsgView*)view SelectedDatos];
+    }
   }
 
 //--------------------------------------------------------------------------------------------------------------------------------------------------------
 // Retorna la vista de los datos seleccionados
-+(DatosView*) SelectedDatos
++(NSView*) SelectedDatos
   {
   return DatosSel;
+  }
+
+//--------------------------------------------------------------------------------------------------------------------------------------------------------
+// Retorna la vista de los datos seleccionados si esta es una vista de datos
++(DatosView*) SelectedDatosView
+  {
+  if( DatosSel && ![DatosSel isKindOfClass: DatosView.class] ) return nil;
+  
+  return (DatosView*)DatosSel;
   }
 
 //--------------------------------------------------------------------------------------------------------------------------------------------------------

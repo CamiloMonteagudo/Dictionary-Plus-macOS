@@ -17,6 +17,8 @@
 #import "ConjCtrller.h"
 #import "FindPlusCtrller.h"
 #import "BtnsData.h"
+#import "BuyViewController.h"
+#import "ProdsData.h"
 
 //===================================================================================================================================================
 @interface ViewController()
@@ -25,6 +27,8 @@
 
   ConjSimple* Conjs;
   TextQuery* Query;
+  
+  int PurchDir;
   }
 
 @property (weak) IBOutlet NSPopUpButton *CbLangs;
@@ -36,27 +40,24 @@
 @property (weak) IBOutlet NSTableView *lstConjugates;
 @property (weak) IBOutlet NSView *ConjPanel;
 @property (weak) IBOutlet NSSearchField *FindConj;
-
-//@property (weak) IBOutlet NSProgressIndicator *WaitFind;
-//@property (weak) IBOutlet MyButton *btnDelSelDato;
-//@property (weak) IBOutlet MyButton *btnCopyTrd;
-//@property (weak) IBOutlet MyButton *btnConjWrd;
-//@property (weak) IBOutlet MyButton *btnTrdWrd;
-
+@property (weak) IBOutlet NSLayoutConstraint *HeaderHeight;
+@property (weak) IBOutlet NSView *HeaderBox;
+@property (weak) IBOutlet NSBox *DictBox;
+@property (weak) IBOutlet NSTextField *txtHeaderMsg;
+@property (weak) IBOutlet NSBox *boxHeaderMsg;
+@property (weak) IBOutlet NSButton *btnComprar;
 
 - (IBAction)OnChangeFrase:(NSSearchField *)sender;
 - (IBAction)OnDelAllDatos:(NSButton *)sender;
 - (IBAction)OnSwapDict:(MyButton *)sender;
 - (IBAction)OnConjQuery:(MyButton *)sender;
 - (IBAction)OnCloseConjPanel:(id)sender;
-
-//- (IBAction)OnConjWord:(MyButton *)sender;
-//- (IBAction)OnTrdWord:(MyButton *)sender;
-//- (IBAction)DelEntry:(NSButton *)sender;
-//- (IBAction)CopyTrd:(NSButton *)sender;
+- (IBAction)OnCloseMsg:(MyButton *)sender;
 
 - (IBAction)OnShowCojugator:(MyButton *)sender;
 - (IBAction)OnShowAvancedFind:(MyButton *)sender;
+- (IBAction)OnShowCompras:(NSView *)sender;
+- (IBAction)OnComprarDir:(id)sender;
 
 @end
 
@@ -67,6 +68,8 @@
 - (void)viewDidLoad
   {
   Ctrller = self;
+  PurchDir = -1;
+  [Purchases SetNotify:self];                                   // Se registra para recibir informacion sobre InApp Purchase
 
   SortEntries = [SortedIndexs Empty];
 
@@ -82,11 +85,27 @@
   }
 
 //--------------------------------------------------------------------------------------------------------------------------------------------------------
-- (void)setRepresentedObject:(id)representedObject
-  {
-  [super setRepresentedObject:representedObject];
 
-  // Update the view, if already loaded.
+//--------------------------------------------------------------------------------------------------------------------------------------------------------
+// Se llama cuando se obtiene la informacion de los productos desde App Store
+- (void) UpdatePurchaseInfo
+  {
+  }
+
+//--------------------------------------------------------------------------------------------------------------------------------------------------------
+// Se llama cuando se completa la compra de un producto
+- (void) PurchaseCompleted
+  {
+  if( IsBuyDir(PurchDir) )
+    [self HidePurchaseMsg];
+  }
+
+//--------------------------------------------------------------------------------------------------------------------------------------------------------
+// Se llama cuando se produce un error en el mecanismo de compra
+- (void) PurchaseError:(NSString*) locMsg
+  {
+  if( ![locMsg isEqualToString:@"RequestInfoError"] )
+    [self ShowMsg:locMsg WithTitle:@"TitleError"];
   }
 
 //--------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -97,7 +116,7 @@
 
   for(int iDir=0; iDir<DIRCount(); iDir++)                    // Recorre todas las direcciones de traducción
     {
-    NSString* sDir = DIRName(iDir);                           // Obtiene el nombre de la dirección
+    NSString* sDir = DIRName(iDir,FALSE,FALSE);               // Obtiene el nombre de la dirección
 
     [_CbLangs addItemWithTitle:sDir];                         // La adicona al combo de idiomas
 
@@ -107,42 +126,119 @@
     Item.target = self;                                       // Pone objeto para reportar las acciones
     Item.action = @selector(OnSelDir:);                       // Pone la función a la que se reporta la acción
     }
-
-  [self LoadDictionary];                                      // Carga el diccionario para los idiomas seleccionados
+  
+  [self LoadDictWithSrc:LGSrc AndDes:LGDes];                  // Carga el diccionario para los idiomas por defecto
   }
 
 //--------------------------------------------------------------------------------------------------------------------------------------------------------
 // Se llama cuando se selecciona una dirección de traducción
 - (void)OnSelDir:(id)sender
   {
-  int iDir = (int)((NSMenuItem*)sender).tag;                // Obtiene dirección del item seleccionado
+  int iDir = (int)((NSMenuItem*)sender).tag;                  // Obtiene dirección del item seleccionado
 
-  LGSrc = DIRSrc(iDir);                                     // Obtiene idioma fuente de la dirección
-  LGDes = DIRDes(iDir);                                     // Obtiene idioma destino de la dirección
+  int src = DIRSrc(iDir);                                     // Obtiene idioma fuente de la dirección
+  int des = DIRDes(iDir);                                     // Obtiene idioma destino de la dirección
 
-  [self LoadDictionary];                                    // Carga el diccionario para los idiomas seleccionados
+  [self LoadDictWithSrc:src AndDes:des];                      // Carga el diccionario para los idiomas seleccionados
   }
 
 //--------------------------------------------------------------------------------------------------------------------------------------------------------
 // Carga el diccionario para los idiomas activos
-- (void) LoadDictionary
+- (void) LoadDictWithSrc:(int) src AndDes:(int) des
   {
+  int iDir = DIRFromLangs( src, des );                         // Toma la dirección seleccionada
+  
+  if( ![self CheckPurchase:iDir] )                             // Chequea que el diccionarios este comprado o en modo prueba
+     return;                                                   // No lo carga hasta que no sea comprado
+  
+  LGSrc = src;
+  LGDes = des;
+  [_CbLangs selectItemWithTag:iDir];                          // Selecciona el diccionario actual
+  
   [_WaitForDict startAnimation:self];
-
-  int iDir = DIRFromLangs( LGSrc, LGDes );                    // Toma la dirección actual
-  [_CbLangs selectItemWithTag:iDir];                          // La selecciona en combo
 
   // Guarda dirección seleccionada en los datos del usuario
   NSUserDefaults* UserDef = [NSUserDefaults standardUserDefaults];
   [UserDef setObject:[NSNumber numberWithInt:iDir] forKey:@"lastDir"];
 
-  [DictMain    LoadWithSrc:LGSrc AndDes:LGDes ];
-  [DictIndexes LoadWithSrc:LGSrc AndDes:LGDes ];
+  BOOL ret1 = [DictMain    LoadWithSrc:LGSrc AndDes:LGDes ];
+  BOOL ret2 = [DictIndexes LoadWithSrc:LGSrc AndDes:LGDes ];
 
-  [self SetTitle];
-  [self FindFrases];
+  if( ret1 && ret2 )
+    {
+    [self SetTitle];
+    [self FindFrases];
+    }
+  else
+    [self ShowHeaderMsg:@"NoLoadDict"];
 
   [_WaitForDict stopAnimation:self];
+  }
+
+//--------------------------------------------------------------------------------------------------------------------------------------------------------
+// Pone un mensaje en la parte de arriba de la ventana principal
+- (void) ShowHeaderMsg:(NSString*) locMsg
+  {
+  NSString* msg  = NSLocalizedString(locMsg, nil);
+  
+  _boxHeaderMsg.fillColor = MsgSelColor;
+  _txtHeaderMsg.textColor = MsgTxtColor;
+  
+  _txtHeaderMsg.stringValue = msg;
+  
+  _HeaderHeight.constant = 60;
+  _btnComprar.hidden = true;
+  
+  PurchDir = -1;
+  }
+
+//--------------------------------------------------------------------------------------------------------------------------------------------------------
+// Pone un mensaje de compra en la parte de arriba
+- (void) ShowPurchaseMsgForDir:(int) iDir
+  {
+  PurchDir = iDir;
+  
+  _boxHeaderMsg.fillColor = MsgSelColor;
+  _txtHeaderMsg.attributedStringValue = MsgForDir( @"DictBuyMsg1", iDir);
+  
+  _HeaderHeight.constant = 60;
+  _btnComprar.hidden = false;
+  }
+
+//--------------------------------------------------------------------------------------------------------------------------------------------------------
+// Oculata el de compra en la parte de arriba
+- (void) HidePurchaseMsg
+  {
+  _HeaderHeight.constant = 32;
+  }
+
+//--------------------------------------------------------------------------------------------------------------------------------------------------------
+// Chequea que el dicionario 'iDir' este comprado o se pueda usar en modo de prueba
+- (BOOL) CheckPurchase:(int) iDir
+  {
+  if( IsBuyDir(iDir) )                                          // Si el diccionario ya esta comprado
+    {
+    nBuyDays = -1;                                              // Muestra todas las llaves
+    [self HidePurchaseMsg];                                     // Oculta el mensaje de la parte de arriba si esta puesto
+    return TRUE;                                                // Retorna que el diccionario se puede usar
+    }
+  
+  BOOL ret = TRUE;
+  nBuyDays = GetDayCount();                                     // Obtiene los días trascurridos desde la primera corrida
+  
+//  if( nDay>15 )                                                 // Si pasaron más de 15 dias
+//    {
+//    int iDirNow = DIRFromLangs( LGSrc, LGDes );                 // Toma la dirección actual
+//    [_CbLangs selectItemWithTag:iDirNow];                       // Selecciona el diccionario anterior
+//    
+//    NSNumber *dir = [NSNumber numberWithInt: iDir ];
+//    [self performSegueWithIdentifier:@"Purchases" sender:dir];  // Muestra la vista de compra
+//
+//    ret = FALSE;                                                // El dicionario no paso el chequeo y no se puede usar
+//    }
+  
+  [self ShowPurchaseMsgForDir: iDir];                             // Muestra un mensaje en la parte de arriba
+  return ret;
   }
 
 //--------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -186,11 +282,7 @@
 // Intercambia la fuente y origen del diccionario
 - (IBAction)OnSwapDict:(MyButton *)sender
   {
-  int tmp = LGDes;
-  LGDes   = LGSrc;
-  LGSrc   = tmp;
-
-  [self LoadDictionary];                                    // Carga el diccionario para los idiomas seleccionados
+  [self LoadDictWithSrc:LGDes AndDes:LGSrc];                // Carga el diccionario inverso
   }
 
 //--------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -205,7 +297,8 @@
     {
     _ConjPanel.hidden = TRUE;
 
-    [self ShowMsg:@"NoVerbInQuery" WithTitle:@"TitleConj"];
+    [self OnShowCojugator:nil ];
+//    [self ShowMsg:@"NoVerbInQuery" WithTitle:@"TitleConj"];
     }
   
   [self SetPanelIcon];
@@ -220,10 +313,44 @@
   }
 
 //--------------------------------------------------------------------------------------------------------------------------------------------------------
+// Oculta la franja de arriba donde se muestran los mensajes
+- (IBAction)OnCloseMsg:(MyButton *)sender
+  {
+//  NSSize sz1 = _HeaderBox.frame.size;
+//  
+//  CGFloat dif = sz1.height-32;
+//  sz1.height = 32;
+//  
+//  //[[_HeaderBox animator] setFrameSize:sz1];
+//
+//  NSSize sz2 = _DictBox.frame.size;
+//  sz2.height += dif;
+//  
+//  //[[_DictBox animator] setFrameSize:sz2];
+//  [_HeaderBox setWantsLayer:YES];
+//  [_DictBox   setWantsLayer:YES];
+//
+//  [NSAnimationContext beginGrouping ];
+//  [NSAnimationContext currentContext].allowsImplicitAnimation = YES;
+//  [NSAnimationContext currentContext].duration = 10;
+
+  //[[_HeaderBox animator] setFrameSize:sz1];
+  //[[_DictBox animator] setFrameSize:sz2];
+  
+  //[_HeaderBox setFrameSize:sz1];
+ // [_DictBox   setFrameSize:sz2];
+  
+   [self HidePurchaseMsg];                                     // Oculta el mensaje de la parte de arriba si esta puesto
+  
+//  [NSAnimationContext endGrouping];
+  }
+
+//--------------------------------------------------------------------------------------------------------------------------------------------------------
 // Se llama para conjugar una palabra en la vista de datos
 - (void) ConjWordOnData
   {
-  DatosView* selDatos = [ZoneDatosView SelectedDatos];
+  DatosView* selDatos = [ZoneDatosView SelectedDatosView];
+  if( !selDatos ) return;
   
   int lang;
   NSString* selWrd = [selDatos getSelWordAndLang:&lang];
@@ -238,10 +365,10 @@
 
 //--------------------------------------------------------------------------------------------------------------------------------------------------------
 // Se llama para buscar las traducciones de una palabra en la vista de datos
-
 - (void) TrdWordOnData
   {
-  DatosView* selDatos = [ZoneDatosView SelectedDatos];
+  DatosView* selDatos = [ZoneDatosView SelectedDatosView];
+  if( !selDatos ) return;
   
   int src = selDatos.src;
   int des = selDatos.des;
@@ -307,7 +434,7 @@ static NSDictionary* attrKey = @{ NSFontAttributeName:fontReg };
 static NSDictionary* attrWrd = @{ NSFontAttributeName:fontBold };
 
 //--------------------------------------------------------------------------------------------------------------------------------------------------------
-// Se llama para conecer la palabra que se corresponde con la fila 'row'
+// Se llama para conocer la palabra que se corresponde con la fila 'row'
 - (NSView *)tableView:(NSTableView *)tableView viewForTableColumn:(NSTableColumn *)tableColumn row:(NSInteger)row
   {
   NSTableCellView* cel = [tableView makeViewWithIdentifier:@"DictKey" owner:tableView];
@@ -411,14 +538,42 @@ static NSDictionary* attrWrd = @{ NSFontAttributeName:fontBold };
 
   }
 
+//--------------------------------------------------------------------------------------------------------------------------------------------------------
+// Muestra la ventana de del conjugador
 - (IBAction)OnShowCojugator:(MyButton *)sender;
   {
   [self performSegueWithIdentifier:@"Conjugator" sender:self];
   }
 
+//--------------------------------------------------------------------------------------------------------------------------------------------------------
+// Muestra la ventana de búquedas avanzadas
 - (IBAction)OnShowAvancedFind:(MyButton *)sender;
   {
   [self performSegueWithIdentifier:@"FindPlus" sender:self];
+  }
+
+//--------------------------------------------------------------------------------------------------------------------------------------------------------
+// Se llama cuando se primer el boton de mostrar compras
+- (IBAction)OnShowCompras:(NSView *)sender
+  {
+  NSNumber *dir = [NSNumber numberWithInt:-1];
+  [self performSegueWithIdentifier:@"Purchases" sender:dir];
+  }
+
+//--------------------------------------------------------------------------------------------------------------------------------------------------------
+// Muestra la ventana de búquedas avanzadas
+- (IBAction)OnComprarDir:(id)sender
+  {
+  int iDir = IsBuyDir(PurchDir)? -1 : PurchDir;                 // Mustra todos los diccionarios
+  [self ShowPurchsesForDir:iDir];
+  }
+
+//--------------------------------------------------------------------------------------------------------------------------------------------------------
+// Muestra la vista de compras para la dirección 'Dir'
+- (void) ShowPurchsesForDir:(int) iDir
+  {
+  NSNumber *dir = [NSNumber numberWithInt: iDir ];
+  [self performSegueWithIdentifier:@"Purchases" sender:dir];    // Muestra la vista de compras dentro de la aplicación
   }
 
 //--------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -453,7 +608,15 @@ static NSDictionary* attrWrd = @{ NSFontAttributeName:fontBold };
 
    findCtrller.FindText = _txtFrase.stringValue;
    }
-
+  else if( [sID isEqualToString:@"Purchases"] )
+    {
+    BuyViewController* Ctrller = segue.destinationController;
+    
+    int dir =  [(NSNumber *)sender intValue];
+  
+    Ctrller.NowDir = dir;
+    Ctrller.Mode   = (dir>=0)? 1 : 0;
+    }
   }
   
 @end

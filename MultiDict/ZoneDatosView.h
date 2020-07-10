@@ -15,8 +15,9 @@
 
 @property (nonatomic,readonly) int Count;         // Cantidad de datos que se estan mostrando
 
-+(void) SelectDatos:(DatosView*) view;
-+(DatosView*) SelectedDatos;
++(void) SelectDatos:(NSView*) view;
++(NSView*) SelectedDatos;
++(DatosView*) SelectedDatosView;
 
 - (void) AddDatosAtIndex:(NSInteger)Idx;
 - (void) AddAfterSelDatos:(EntryDict*) entry Src:(int)src Des:(int)des;

@@ -8,8 +8,9 @@
 
 #import <Cocoa/Cocoa.h>
 #import "TextQueryPlus.h"
+#import "AppPurchases.h"
 
-@interface ViewController : NSViewController
+@interface ViewController : NSViewController <ShowPurchaseUI>
 
 @property (weak) IBOutlet NSSearchField *txtFrase;
 @property (weak) IBOutlet NSTableView *tableFrases;
@@ -20,12 +21,15 @@
 //- (void) DisenableBtns:(int) sw;
 
 - (void) ShowMsg:(NSString*) msg WithTitle:(NSString*) title;
+- (void) ShowHeaderMsg:(NSString*) locMsg;
+- (void) ShowPurchsesForDir:(int) iDir;
 
 - (void) FindFrasesWithQuery:(TextQueryPlus*) query Options:(int) sw;
 
 - (void) DelEntry;
 - (void) ConjWordOnData;
 - (void) TrdWordOnData;
+- (void) HidePurchaseMsg;
 
 @end
 //===================================================================================================================================================

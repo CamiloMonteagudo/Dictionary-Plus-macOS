@@ -71,4 +71,33 @@
 "Color"        = "Color";
 "Enfermedad"   = "Disease";
 
+"DictsInclud"  = "Dictionaries included:";
+
+"ProdAll" = "All Dictionaries";
+"PackEs"  = "Spanish Pack";
+"PackEn"  = "English Pack";
+"PackIt"  = "Italian Pack";
+"PackFr"  = "French Pack";
+"ParEnEs" = "English and Spanish";
+"ParEnIt" = "English and Italian";
+"ParEnFr" = "English and French";
+"ParEsIt" = "Spanish and Italian";
+"ParEsFr" = "Spanish and French";
+"ParItFr" = "Italian and French";
+
+"PurhaseMsg1" = "There are {ND} days to try the dictionary, if you want to obtain it, click on the 'Buy' button.";
+"PurhaseMsg2" = "The trial period is over, to use the dictionary you must buy it.";
+"NoLoadDict"  = "The dictionary could not be loaded";
+
+"DictBuyMsg1" = "The {DIR} dictionary has not been purchased, its operation is limited.";
+"DictBuyMsg2" = "In order to see this result, the {DIR} dictionary must be purchased.";
+"BuyTooltip"  = "Displays a view to buy the dictionary.";
+"BtnComprar"  = "Buy";
+
+"TransError" = "There was an error in the transaction";
+"NoAppStore" = "It was not possible to connect to the App Store.";
+"TitleError" = "In App purchase error";
+"RequestInfoError" = "It was not possible to obtain product information from APP Store.\r\nDo you want to try again?";
+"No" = "No";
+"Si" = "Yes";
 
