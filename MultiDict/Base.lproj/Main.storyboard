@@ -13,11 +13,11 @@
                 <application id="hnw-xV-0zn" sceneMemberID="viewController">
                     <menu key="mainMenu" title="Main Menu" systemMenu="main" id="AYu-sK-qS6">
                         <items>
-                            <menuItem title="Dictionary Plus" id="1Xt-HY-uBw">
+                            <menuItem title="Translation Dictionary" id="1Xt-HY-uBw">
                                 <modifierMask key="keyEquivalentModifierMask"/>
-                                <menu key="submenu" title="Dictionary Plus" id="uQy-DD-JDr">
+                                <menu key="submenu" title="Translation Dictionary" id="uQy-DD-JDr">
                                     <items>
-                                        <menuItem title="About Dictionary Plus" id="5kV-Vb-QxS">
+                                        <menuItem title="About Translation Dictionary" id="5kV-Vb-QxS">
                                             <modifierMask key="keyEquivalentModifierMask"/>
                                             <connections>
                                                 <action selector="ShowStandarAbout:" target="Voe-Tx-rLC" id="Lle-c1-7K7"/>
@@ -29,7 +29,7 @@
                                             <menu key="submenu" title="Services" systemMenu="services" id="hz9-B4-Xy5"/>
                                         </menuItem>
                                         <menuItem isSeparatorItem="YES" id="4je-JR-u6R"/>
-                                        <menuItem title="Hide Dictionary Plus" keyEquivalent="h" id="Olw-nP-bQN">
+                                        <menuItem title="Hide Translation Dictionary" keyEquivalent="h" id="Olw-nP-bQN">
                                             <connections>
                                                 <action selector="hide:" target="Ady-hI-5gd" id="PnN-Uc-m68"/>
                                             </connections>
@@ -47,7 +47,7 @@
                                             </connections>
                                         </menuItem>
                                         <menuItem isSeparatorItem="YES" id="kCx-OE-vgT"/>
-                                        <menuItem title="Quit Dictionary Plus" keyEquivalent="q" id="4sb-4s-VLi">
+                                        <menuItem title="Quit Translation Dictionary" keyEquivalent="q" id="4sb-4s-VLi">
                                             <connections>
                                                 <action selector="terminate:" target="Ady-hI-5gd" id="Te7-pn-YzF"/>
                                             </connections>
@@ -289,7 +289,7 @@
                                                 <action selector="performZoom:" target="Ady-hI-5gd" id="xkq-q9-7fR"/>
                                             </connections>
                                         </menuItem>
-                                        <menuItem title="Enter Full Sceen" keyEquivalent="f" id="hCl-xe-6Ky">
+                                        <menuItem title="Enter Full Screen" keyEquivalent="f" id="hCl-xe-6Ky">
                                             <modifierMask key="keyEquivalentModifierMask" control="YES" command="YES"/>
                                             <connections>
                                                 <action selector="toggleFullScreen:" target="Ady-hI-5gd" id="wkm-3W-cfh"/>
@@ -301,7 +301,7 @@
                                                 <action selector="OnShowAvancedFind:" target="Ady-hI-5gd" id="vNy-Ik-hBp"/>
                                             </connections>
                                         </menuItem>
-                                        <menuItem title="Conjugator of Verbs" keyEquivalent="c" id="pV6-6W-2qo">
+                                        <menuItem title="Verb Conjugator" keyEquivalent="c" id="pV6-6W-2qo">
                                             <connections>
                                                 <action selector="OnShowCojugator:" target="Ady-hI-5gd" id="0av-IA-T9J"/>
                                             </connections>
@@ -1071,7 +1071,7 @@
                                                 <constraint firstAttribute="height" constant="17" id="T3e-UX-XfK"/>
                                                 <constraint firstAttribute="width" constant="140" id="fH1-uG-AAr"/>
                                             </constraints>
-                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Word similar:" id="mXc-Ry-TXO">
+                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Similar word:" id="mXc-Ry-TXO">
                                                 <font key="font" metaFont="system"/>
                                                 <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                                 <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>

@@ -2,8 +2,8 @@
 /* Class = "NSTextFieldCell"; title = "Significados"; ObjectID = "01K-Zo-5y3"; */
 "01K-Zo-5y3.title" = "Significados";
 
-/* Class = "NSMenuItem"; title = "Dictionary Plus"; ObjectID = "1Xt-HY-uBw"; */
-"1Xt-HY-uBw.title" = "Dictionary Plus";
+/* Class = "NSMenuItem"; title = "Translation Dictionary"; ObjectID = "1Xt-HY-uBw"; */
+"1Xt-HY-uBw.title" = "Diccionario de Traducción";
 
 /* Class = "NSMenu"; title = "Find"; ObjectID = "1b7-l0-nxx"; */
 "1b7-l0-nxx.title" = "Buscar";
@@ -23,14 +23,14 @@
 /* Class = "NSMenuItem"; title = "Find"; ObjectID = "4EN-yA-p0u"; */
 "4EN-yA-p0u.title" = "Buscar";
 
-/* Class = "NSMenuItem"; title = "Quit Dictionary Plus"; ObjectID = "4sb-4s-VLi"; */
-"4sb-4s-VLi.title" = "Salir de Dictionary Plus";
+/* Class = "NSMenuItem"; title = "Quit Translation Dictionary"; ObjectID = "4sb-4s-VLi"; */
+"4sb-4s-VLi.title" = "Salir de Diccionario de Traducción";
 
 /* Class = "NSMenuItem"; title = "Edit"; ObjectID = "5QF-Oa-p0T"; */
 "5QF-Oa-p0T.title" = "Edición";
 
-/* Class = "NSMenuItem"; title = "About Dictionary Plus"; ObjectID = "5kV-Vb-QxS"; */
-"5kV-Vb-QxS.title" = "Acerca de Dictionary Plus";
+/* Class = "NSMenuItem"; title = "About Translation Dictionary"; ObjectID = "5kV-Vb-QxS"; */
+"5kV-Vb-QxS.title" = "Acerca de Diccionario de Traducción";
 
 /* Class = "NSMenuItem"; title = "Redo"; ObjectID = "6dh-zS-Vam"; */
 "6dh-zS-Vam.title" = "Rehacer";
@@ -98,8 +98,8 @@
 /* Class = "NSButton"; ibShadowedToolTip = "Borra todos los datos de significados"; ObjectID = "Nd3-kZ-Fxc"; */
 "Nd3-kZ-Fxc.ibShadowedToolTip" = "Borra todos los datos de significados";
 
-/* Class = "NSMenuItem"; title = "Hide Dictionary Plus"; ObjectID = "Olw-nP-bQN"; */
-"Olw-nP-bQN.title" = "Ocultar Dictionary Plus";
+/* Class = "NSMenuItem"; title = "Hide Translation Dictionary"; ObjectID = "Olw-nP-bQN"; */
+"Olw-nP-bQN.title" = "Ocultar Diccionario de Traducción";
 
 /* Class = "NSMenuItem"; title = "Find Previous"; ObjectID = "OwM-mh-QMV"; */
 "OwM-mh-QMV.title" = "Buscar anterior";
@@ -293,8 +293,8 @@
 /* Class = "NSButtonCell"; title = "Encontrar todas las palbras en las frases"; ObjectID = "uEc-Tj-fk0"; */
 "uEc-Tj-fk0.title" = "Mostrar sólo las entradas con todas las palabras";
 
-/* Class = "NSMenu"; title = "Dictionary Plus"; ObjectID = "uQy-DD-JDr"; */
-"uQy-DD-JDr.title" = "Dictionary Plus";
+/* Class = "NSMenu"; title = "Translation Dictionary"; ObjectID = "uQy-DD-JDr"; */
+"uQy-DD-JDr.title" = "Diccionario de Traducción";
 
 /* Class = "NSMenuItem"; title = "Cut"; ObjectID = "uRl-iY-unG"; */
 "uRl-iY-unG.title" = "Cortar";

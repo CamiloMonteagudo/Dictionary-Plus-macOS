@@ -14,10 +14,11 @@ CO1  |Comida       |{pizza}            |{pizza}            |{pizza}            |
 NS1  |Día          |{Martes}           |{Tuesday}          |{Martedì}          |{Mardi}    
 NS2  |Día          |{Lunes}            |{Monday}           |{Lunedì}           |{Lundi}    
 CD1  |Dinero       |{$100}             |{$100}             |{$100}             |{$100}    
-DE1  |Dispositivo  |{IPhone}           |{IPhone}           |{IPhone}           |{IPhone}
+DE1  |Dispositivo  |{iPhone}           |{iPhone}           |{iPhone}           |{iPhone}
 DE2  |Dispositivo  |{computadora}      |{computer}         |{computadora}      |{computadora}
 NE1  |Empresa      |{Twitter}          |{Twitter}          |{Twitter}          |{Twitter}
 NE2  |Empresa      |{Internet}         |{Internet}         |{Internet}         |{Internet}
+MK1  |Empresa      |{Sony}             |{Sony}             |{Sony}             |{Sony}
 NU1  |Escuela      |{Harvard}          |{Harvard}          |{Harvard}          |{Harvard}
 FC1  |Fecha        |{15-05-2010}       |{15-05-2010}       |{15-05-2010}       |{15-05-2010}
 FC2  |Fecha        |{25-10-2016}       |{25-10-2016}       |{25-10-2016}       |{25-10-2016}
@@ -45,6 +46,7 @@ LN8  |Lugar        |{Estados Unidos}   |{United States}    |{United States}    |
 NL7  |Lugar        |{Torre de Eiffel}  |{Eiffel's Tower}   |{Torre de Eiffel}  |{Torre de Eifflel}
 NL8  |Lugar        |{Museo}            |{Museum}           |{Musée}            |{Museo}
 NL9  |Lugar        |{el teatro}        |{the theater}      |{il teatro}        |{le thétre}
+LH1  |Lugar        |{apartamento}      |{apartment}        |{appartamento}     |{appartement}
 NN1  |Número       |{8}                |{8}                |{8}                |{8}        
 NN2  |Número       |{1}                |{1}                |{1}                |{1}        
 NN3  |Número       |{4}                |{4}                |{4}                |{4}        
@@ -52,6 +54,7 @@ NN4  |Número       |{7}                |{7}                |{7}                
 NN5  |Numero       |{2}                |{2}                |{2}                |{2}
 NN6  |Numero       |{20}               |{20}               |{20}               |{20}
 NN7  |Numero       |{100}              |{100}              |{100}              |{100}
+NN8  |Numero       |{999}              |{999}              |{999}              |{999}
 NC1  |Nro Cardinal |{7ma}              |{7th}              |{7ma}              |{7ma}     
 LL1  |Nro Romano   |{III}              |{III}              |{III}              |{III}     
 LL2  |Nro Romano   |{IV}               |{IV}               |{IV}               |{IV}      
@@ -60,9 +63,10 @@ NM2  |Mes          |{Marzo}            |{March}            |{Marzo}            |
 NM3  |Mes          |{Agosto}           |{Agosto}           |{Agosto}           |{Agosto}   
 MD1  |Moneda       |{Dolar}            |{Dollar}           |{Dolar}            |{Dollar}
 MD2  |Moneda       |{Euro}             |{Euro}             |{Euro}             |{Euro}
-NO1  |Objeto       |{manzanas}         |{apples}           |{mela}             |{pomme}   
+NO1  |Objeto       |{manzanas}         |{apples}           |{mele}             |{pomme}   
 NO2  |Objeto       |{tren}             |{train}            |{treno}            |{train}
 NO3  |Objeto       |{huevo}            |{egg}              |{uovo}             |{oeuf}
+NO4  |Objeto       |{Frutas}           |{Fruits}           |{Frutta}           |{Fruits}
 PW1  |Página Web   |{www.facebook.com} |{www.facebook.com} |{www.facebook.com} |{www.facebook.com}
 WD1  |Palabra      |{jugar}            |{play}             |{giocare}          |{jouer}   
 WD2  |Palabra      |{trabajar}         |{work}             |{lavorare}         |{labourer}
@@ -88,5 +92,8 @@ CS2  |Tamaño       |{Pequeño}          |{Small}            |{Piccolo}         
 TM1  |Tiempo       |{Noche}            |{Night}            |{Notte}            |{Nuit}
 NT1  |Teléfono     |{9348529}          |{9348529}          |{9348529}          |{9348529}
 NR1  |Rio          |{Missipi}          |{Missipi}          |{Missipi}          |{Missipi}
+ST1  |Estado       |{Saludable}        |{healthy}          |{sano}             |{salutaire}
+EC1  |Estado       |{soltero}          |{single}           |{single}           |{célibataire}
+
 
 

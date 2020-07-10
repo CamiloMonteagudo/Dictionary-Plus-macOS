@@ -1,0 +1,10 @@
+/* 
+  InfoPlist.strings
+  Translation Dictionary (ES-IT)
+
+  Created by Quatix on 29/11/17.
+  Copyright © 2017 BigXSoft. All rights reserved.
+*/
+
+CFBundleDisplayName = "Diccionario de Traducción";
+CFBundleName = "Diccionario de Traducción";

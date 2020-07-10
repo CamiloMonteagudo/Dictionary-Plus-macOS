@@ -1,6 +1,6 @@
 "UILang" = "1";
 
-"WinTitle"       = "Dictionay Plus";
+"WinTitle"       = "Translation Dictionay";
 "TitleFindMeans" = "Looking for meanings";
 "NoFindWrd"      = "The word is not in the dictionary";
 "NoFindWrdEntry" = "There is no a entry into the dictionary for that word";
@@ -17,7 +17,7 @@
 "ConjLabel"       = "Conjugations";
 "ConjViewWords"   = "By words";
 "ConjViewModes"   = "By modes";
-"ConjViewPersons" = "By person";
+"ConjViewPersons" = "By persons";
 
 "Sustituciones" = "Replacements";
 "DictChaged"    = "* Dictionay has changed";
@@ -37,12 +37,12 @@
 "Escuela"      = "School";
 "Fecha"        = "Date";
 "Formato"      = "Format";
-"Gentilicio"   = "Gentilicio";
-"Grupo"        = "Grupo";
+"Gentilicio"   = "Gentile";
+"Grupo"        = "Group";
 "Hora"         = "Time";
 "Idioma"       = "Languaje";
 "Lenguaje"     = "Languaje";
-"Libro"        = "Libro";
+"Libro"        = "Book";
 "Lugar"        = "Place";
 "Número"       = "Number";
 "Nro Cardinal" = "Cardinal #";
@@ -61,3 +61,4 @@
 "Tiempo"       = "Tiempo";
 "Teléfono"     = "Phone";
 "Rio"          = "River";
+"Estado"       = "State";

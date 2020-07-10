@@ -1,6 +1,6 @@
 "UILang" = "0";
 
-"WinTitle"       = "Diccionario Plus";
+"WinTitle"       = "Diccionario de Traducción";
 "TitleFindMeans" = "Buscando significados";
 "NoFindWrd"      = "La palabra no se encuentra en el diccionario";
 "NoFindWrdEntry" = "No existe una entrada en el diccionario para esa palabra";
@@ -37,12 +37,12 @@
 "Escuela"      = "Escuela";
 "Fecha"        = "Fecha";
 "Formato"      = "Formato";
-"Gentilicio"   = "Gentile";
-"Grupo"        = "Group";
+"Gentilicio"   = "Gentilicio";
+"Grupo"        = "Grupo";
 "Hora"         = "Hora";
 "Idioma"       = "Idioma";
 "Lenguaje"     = "Lenguaje";
-"Libro"        = "Book";
+"Libro"        = "Libro";
 "Lugar"        = "Lugar";
 "Número"       = "Número";
 "Nro Cardinal" = "# Cardinal";
@@ -61,5 +61,6 @@
 "Tiempo"       = "Time";
 "Teléfono"     = "Teléfono";
 "Rio"          = "Rio";
+"Estado"       = "Estado";
 
 

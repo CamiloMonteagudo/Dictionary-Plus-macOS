@@ -75,10 +75,13 @@ static DictRed* NowDictRed;
     NSString* ln = Lines[i];
     int      lst = (int)ln.length-1;
 
-    NSString* wrd  = [ln substringToIndex:lst];
-    NSNumber* typs = [NSNumber numberWithInt: HexDigit(lst, ln ) ];
+    if( lst>0 )
+      {
+      NSString* wrd  = [ln substringToIndex:lst];
+      NSNumber* typs = [NSNumber numberWithInt: HexDigit(lst, ln ) ];
 
-    Words[wrd] = typs;
+      Words[wrd] = typs;
+      }
     }
   
   return TRUE;
