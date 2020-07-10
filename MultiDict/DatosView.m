@@ -11,6 +11,7 @@
 #import "MarkView.h"
 #import "EntryDesc.h"
 #import "ConjCore.h"
+#import "BtnsData.h"
 
 //===================================================================================================================================================
 // Boton con cursor de la manito
@@ -30,9 +31,9 @@
 
 - (void)mouseDown:(NSEvent *)theEvent
   {
-  [ZoneDatosView SelectDatos: (DatosView*)self.superview];
-
   [super mouseDown:theEvent];
+  
+  [ZoneDatosView SelectDatos: (DatosView*)self.superview];
   }
 
 @end
@@ -42,11 +43,9 @@
 @interface DatosView()
   {
   MyEdit* Text;                                     // Texto de la tradución
-  MyButton*   btnSust;                              // Botón para mostrar/quitar zona de sustutución de palabras en los datos
 
-  NSTrackingRectTag TrackTag;                       // Rectangulo donde debe estar el mouse para que se muestren los botones
+//  NSTrackingRectTag TrackTag;                       // Rectangulo donde debe estar el mouse para que se muestren los botones
 
-  NSInteger HSust;                                  // Altura del recuadro de sustitución
   NSInteger HText;                                  // Altura del recuadro de texto
 
   NSBox*    SustBox;                                // Recuadro donde se pone los datos de sustitución de palabras
@@ -78,10 +77,6 @@
 @end
 
 //===================================================================================================================================================
-static NSImage* imgOpenSust;
-static NSImage* imgCloseSust;
-
-//===================================================================================================================================================
 // Vista donde se ponen los datos de una palabra
 @implementation DatosView
 
@@ -98,12 +93,6 @@ static NSImage* imgCloseSust;
 // Crea objeto con los datos de la entrada 'Idx'
 + (DatosView*) DatosForEntry:(EntryDict*) Entry Src:(int)src Des:(int)des With:(CGFloat) w
   {
-  if( imgOpenSust == nil )
-    {
-    imgOpenSust  = [NSImage imageNamed:@"OpenSust"];
-    imgCloseSust = [NSImage imageNamed:@"CloseSust"];
-    }
-
   DatosView* Datos = [[DatosView alloc] init];                    // Crea vista de datos nueva
   Datos.src = src;
   Datos.des = des;
@@ -138,25 +127,45 @@ static NSImage* imgCloseSust;
 
   Text.delegate = self;                                           // Pone este objeto como delegado del Textview
 
-  if( Entry.nMarks>0  )                                           // Si hay marcas
-    [self CreateSustButton];                                      // Pone el boton para sustituir las marcas
+  _HasSustMarks = (Entry.nMarks>0);                                     // Pone si tiene marcas de sustitución o no
+//  if( HasSust )                                                   // Si hay marcas
+//    [self CreateSustButton];                                      // Pone el boton para sustituir las marcas
   }
 
 //--------------------------------------------------------------------------------------------------------------------------------------------------------
 // Ocurre cada vez que se cambia la selección del texto
 - (void)textViewDidChangeSelection:(NSNotification *)notification
   {
-  [Ctrller DisenableBtns:TRD_WRD|CONJ_WRD];
+  [self CheckSelectedData];
+  }
 
+//--------------------------------------------------------------------------------------------------------------------------------------------------------
+// Obtiene la palabra seleccionada y el idioma
+- (void) CheckSelectedData
+  {
+  NSButton* bntCj = BtnsData.BtnConjWord;
+  NSButton* bntFw = BtnsData.BtnFindWord;
+  
+  bntCj.hidden = true;
+  bntFw.title = @"";
+  bntFw.hidden = true;
+  
   int lang;
   NSString* selTxt = [self getSelWordAndLang:&lang];
   if( selTxt.length==0 ) return;
-
+  
   if( [ConjCore IsVerbWord:selTxt InLang:lang] )
-    [Ctrller EnableBtns:CONJ_WRD];
-
+    {
+    bntCj.hidden = false;
+    }
+  
   if( lang==_des && [selTxt rangeOfCharacterFromSet:wrdSep].location == NSNotFound )
-    [Ctrller EnableBtns:TRD_WRD];
+    {
+    int lng = [ZoneDatosView SelectedDatos].src;
+    
+    bntFw.title = LGFlag(lng);                                 // Pone la bandera del idioma
+    bntFw.hidden = false;
+    }
   }
 
 //--------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -205,44 +214,24 @@ static NSImage* imgCloseSust;
   }
 
 //--------------------------------------------------------------------------------------------------------------------------------------------------------
-// Quita estos datos de la lista
-//- (void)OnDelItem:(NSButton *)sender
-//  {
-//  NSView* parent = self.superview;
-//
-//  [self removeFromSuperview];
-//
-//  [parent resizeWithOldSuperviewSize: NSMakeSize(0, 0)];
-//  }
-
-//--------------------------------------------------------------------------------------------------------------------------------------------------------
-// Crea el boton para mostrar/ocultar los datos de sustitución
-- (void) CreateSustButton
+// Se llama cuando los datos son seleccionados
+- (void) SelectedDatos
   {
-  NSRect frm = NSMakeRect(10,1, WBTNS, WBTNS );                   // Rectangulo para los botones
-
-  btnSust = [[MyButton alloc] initWithFrame:frm];
-
-  [btnSust setButtonType: NSMomentaryPushInButton];
-  btnSust.bordered = FALSE;
-  //btnSust.hidden = true;
-
-  btnSust.target = self;
-  btnSust.action = @selector(OnSustWords:);
-
-  [self addSubview:btnSust];
+  [BtnsData BtnsDataForView:self];
+  
+  [self CheckSelectedData];
+  
+  [self setNeedsLayout:TRUE];
   }
 
 //--------------------------------------------------------------------------------------------------------------------------------------------------------
 // Muestra/Oculta los controles de sustitución
-- (void)OnSustWords:(NSButton *)sender
+- (void) SustWords
   {
-  if( HSust==0 ) [self CreateSustBoxView ];
-  else           HSust = -HSust;
+  if( _HSustMarks==0 ) [self CreateSustBoxView ];
+  else                 _HSustMarks = -_HSustMarks;
 
   [ZoneDatosView SelectDatos:self];
-  
-  [self.superview resizeWithOldSuperviewSize: NSMakeSize(0, 0)];
   }
 
 static NSCharacterSet * Nums = [NSCharacterSet characterSetWithCharactersInString:@"1234567890"];
@@ -260,7 +249,7 @@ static NSCharacterSet * Nums = [NSCharacterSet characterSetWithCharactersInStrin
 
   Marks = [NSMutableArray<MarkView*> new];
 
-  HSust = 23;                                                     // Altura minima del recuadro para sustitución
+  _HSustMarks = 23;                                               // Altura minima del recuadro para sustitución
   wSustData = 0;                                                  // Ancho maximo para las vistas con datos de sustitución
   
   NSMutableDictionary<NSString*,MarkNum*>* dicNum = [self GetNumMarkInfo];
@@ -341,33 +330,38 @@ static NSCharacterSet * Nums = [NSCharacterSet characterSetWithCharactersInStrin
   HText = Text.frame.size.height+0.5;                       // Calcula la altura real del texto
   y += HText + SEP;
 
-  if( Entry.nMarks>0  )                                     // Si hay marcas
-    [self SustButtonPositionX:w Y:y];                       // Posiciona el boton para sustituir las marcas
+//  if( Entry.nMarks>0  )                                     // Si hay marcas
+//    [self SustButtonPositionX:w Y:y];                       // Posiciona el boton para sustituir las marcas
 
-  if( HSust>0 )                                             // Si hay controles de sustitución
+  if( _HSustMarks>0 )                                       // Si hay controles de sustitución
     {
     [self ResizeSustBoxWidth:wTxt AndPos:y];                // Redimensiona cuadro de sustitución completo
 
-    y += HSust + SEP;                                       // Avanza la y en la altura de recuadro
+    y += _HSustMarks + SEP;                                // Avanza la y en la altura de recuadro
     SustBox.hidden = false;                                 // Muestra el recuadro de sustitución
     }
   else                                                      // Si no hay controles de sustitución
     SustBox.hidden = true;                                  // Oculta el recuadro de sustitución
 
+  if( self==ZoneDatosView.SelectedDatos )                   // Si es el dato seleccionado
+    {
+    y+= 20;                                                 // Crece la altura en 20 pixeles
+    }
+  
   y += SEP;                                                 // Separación entre los datos
   self.frame = NSMakeRect(SEP, 0, w, y);                    // Rectangulo para el recuadro de datos
   return y;
   }
 
-//--------------------------------------------------------------------------------------------------------------------------------------------------------
-// Posiciona correctamente el boton de mostrar/ocultar el botón de sustituicón de marcas
-- (void) SustButtonPositionX:(CGFloat)x Y:(CGFloat) y
-  {
-  [btnSust setFrameOrigin: NSMakePoint(x-WBTNS-SEP, y-HBTNS) ];   // Mueve el boton
-
-  if( HSust>0 ) btnSust.image = imgCloseSust;                 // Si el cuadro de sustitución esta visible, pone icon de ocultar
-  else          btnSust.image = imgOpenSust;                  // Si el cuadro de sustitución esta oculto, pone icon de mostrar
-  }
+////--------------------------------------------------------------------------------------------------------------------------------------------------------
+//// Posiciona correctamente el boton de mostrar/ocultar el botón de sustituicón de marcas
+//- (void) SustButtonPositionX:(CGFloat)x Y:(CGFloat) y
+//  {
+//  [btnSust setFrameOrigin: NSMakePoint(x-WBTNS-SEP, y-HBTNS) ];   // Mueve el boton
+//
+//  if( HSust>0 ) btnSust.image = imgCloseSust;                 // Si el cuadro de sustitución esta visible, pone icon de ocultar
+//  else          btnSust.image = imgOpenSust;                  // Si el cuadro de sustitución esta oculto, pone icon de mostrar
+//  }
 
 //--------------------------------------------------------------------------------------------------------------------------------------------------------
 // Redimenciona el recuadro con los controles de sustitución de marcas de acuerdo al ancho disponible
@@ -380,8 +374,8 @@ static NSCharacterSet * Nums = [NSCharacterSet characterSetWithCharactersInStrin
 
   CGFloat x, y = SEP + nRows*(HSUST_DATA+SEP);              // Altura superior de la zona de datos
 
-  HSust = y + 23;                                           // Altura del recuadro de todos los datos
-  SustBox.frame = NSMakeRect(SEP, yPos, w, HSust );         // Posiciona y posiciona el recuadro de datos
+  _HSustMarks = y + 23;                                     // Altura del recuadro de todos los datos
+  SustBox.frame = NSMakeRect(SEP, yPos, w, _HSustMarks );   // Posiciona y posiciona el recuadro de datos
 
   int i = 0;                                                // Inidice del dato a posicionar
   for( int row=0; row<nRows; ++row )                        // Recorre todas la filas de datos
@@ -401,6 +395,13 @@ static NSCharacterSet * Nums = [NSCharacterSet characterSetWithCharactersInStrin
   }
 
 //--------------------------------------------------------------------------------------------------------------------------------------------------------
+// Se llama cuando cambia la forma de los datos
+- (void)layout
+  {
+  [self.superview resizeWithOldSuperviewSize: NSMakeSize(0, 0)];
+  }
+
+//--------------------------------------------------------------------------------------------------------------------------------------------------------
 // Dibuja el fondo de la zona
 - (void)drawRect:(NSRect)dirtyRect
   {
@@ -414,8 +415,9 @@ static NSCharacterSet * Nums = [NSCharacterSet characterSetWithCharactersInStrin
 
   rc = NSInsetRect(rc, 1, 1);
 
-  if( self == [ZoneDatosView SelectedDatos] ) [SelColor set];
-  else                                        [[NSColor whiteColor] set];
+       if( self == [ZoneDatosView SelectedDatos] ) [SelColor  set];
+  else if( _HasSustMarks                         ) [SustColor set];
+  else                                             [BackColor set];
 
   [[NSBezierPath bezierPathWithRoundedRect:rc xRadius:9 yRadius:9 ] fill];
   }

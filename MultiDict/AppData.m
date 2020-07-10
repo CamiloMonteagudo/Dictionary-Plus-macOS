@@ -31,7 +31,9 @@ NSCharacterSet* TrimSpc  = [NSCharacterSet characterSetWithCharactersInString:@"
 
 NSCharacterSet* wrdSep = [NSCharacterSet characterSetWithCharactersInString:@" -()\"¿?!¡$,/+*="];
 
-NSColor* SelColor = [NSColor colorWithCalibratedRed:0.9 green:0.98 blue:1 alpha:1];
+NSColor* SelColor  = [NSColor colorWithCalibratedRed:0.9 green:0.98 blue:1   alpha:1];
+NSColor* SustColor = [NSColor colorWithCalibratedRed:0.95 green:0.95  blue:0.95 alpha:1];
+NSColor* BackColor = [NSColor colorWithCalibratedRed:1.0 green:1.0  blue:1.0 alpha:1];
 
 //===================================================================================================================================================
 // Abreviatura de de los idiomas segun el codigo ISO
@@ -59,6 +61,12 @@ static NSString * _LngFlags[LGCount] =  {@"🇪🇸", @"🇺🇸", @"🇮🇹", 
 //static int _InstSrc[] = {   1,    1,    1,    0,    0,    0,    2,    2,    2,    3,    3,    3 };
 //static int _InstDes[] = {   0,    2,    3,    1,    2,    3,    0,    1,    3,    0,    1,    2 };
 
+// Paquete de Español
+//                         EsEn, EsIt, EsFr, EnEs, ItEs, FrEs
+static int _InstSrc[]  = {   0,    0,    0,    1,    2,    3, };
+static int _InstDes[]  = {   1,    2,    3,    0,    0,    0, };
+static int _InstConj[] = { 0, 1, 2, 3 };
+
 /* (En-Es)
 //                        EnEs, EsEn
 static int _InstSrc[]  = {   1,    0 };
@@ -78,14 +86,13 @@ static int _InstDes[]  = {   2,    0 };
 static int _InstConj[] = { 0, 2 };
 */
 
-// (Es-Fr)
+/*// (Es-Fr)
 //                        EsFr,  FrEs
 static int _InstSrc[]  = {   0,    3 };
 static int _InstDes[]  = {   3,    0 };
-
 //                        Es, It
 static int _InstConj[] = { 0, 3 };
-
+*/
 
 //---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 int DIRCount()
@@ -232,14 +239,14 @@ NSCharacterSet* Chars[] = { EsChars, nil, ItChars, FrChars };
 // Quita los acentos de la palabra 'wrd' de acuerdo al idioma 'lng'
 NSString* QuitaAcentos( NSString* wrd, int lng )
   {
-  if( lng==1 ) return wrd;                                                    // En inglés no hay acentos, no hace nada
+  NSInteger len = wrd.length;                                                 // Longitud de la palabra
+  if( lng==1 || len==0 ) return wrd;                                          // En inglés no hay acentos, no hace nada
 
   NSCharacterSet* charSet = Chars[lng];                                       // Conjunto de caracteres acentuados según el idioma
 
   NSInteger idx = [wrd rangeOfCharacterFromSet:charSet].location;             // Busca alguno de los caracteres acentuados
   if( idx == NSNotFound ) return wrd;                                         // No hay ninguno, termina sin hacer nada
 
-  NSInteger len = wrd.length;                                                 // Longitud de la palabra
   unichar chars[ len ];                                                       // Buffer para obtener todos los caracteres
   [wrd getCharacters:chars];                                                  // Obtiene todos los caracteres y los pone en el buffer
 

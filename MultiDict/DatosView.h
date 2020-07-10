@@ -40,6 +40,9 @@
 @property (nonatomic) int src;
 @property (nonatomic) int des;
 
+@property (nonatomic, readonly) BOOL HasSustMarks;
+@property (nonatomic, readonly) BOOL HSustMarks;
+
 + (DatosView*) DatosForIndex:(NSInteger) Idx With:(CGFloat) w;
 + (DatosView*) DatosForEntry:(EntryDict*) Entry Src:(int)src Des:(int)des With:(CGFloat) w;
 
@@ -51,7 +54,10 @@
 - (void) ResplaceMark:(NSString*) code TextSrc:(NSString*) srcTxt TextDes:(NSString*) desTxt;
 
 - (NSString*) getSelWordAndLang:(int *)lang;
+
 - (void) CopyText;
+- (void) SelectedDatos;
+- (void) SustWords;
 
 @end
 

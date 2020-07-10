@@ -16,6 +16,7 @@
 #import "FindMeans.h"
 #import "ConjCtrller.h"
 #import "FindPlusCtrller.h"
+#import "BtnsData.h"
 
 //===================================================================================================================================================
 @interface ViewController()
@@ -28,29 +29,31 @@
 
 @property (weak) IBOutlet NSPopUpButton *CbLangs;
 @property (weak) IBOutlet NSProgressIndicator *WaitForDict;
-@property (weak) IBOutlet NSProgressIndicator *WaitFind;
 @property (weak) IBOutlet ZoneDatosView *ZonaDatos;
 
 @property (weak) IBOutlet MyButton *btnSwapDict;
-@property (weak) IBOutlet MyButton *btnDelAllDatos;
-@property (weak) IBOutlet MyButton *btnDelSelDato;
-@property (weak) IBOutlet MyButton *btnCopyTrd;
 @property (weak) IBOutlet MyButton *btnConjPanel;
-@property (weak) IBOutlet MyButton *btnConjWrd;
-@property (weak) IBOutlet MyButton *btnTrdWrd;
 @property (weak) IBOutlet NSTableView *lstConjugates;
 @property (weak) IBOutlet NSView *ConjPanel;
 @property (weak) IBOutlet NSSearchField *FindConj;
 
+//@property (weak) IBOutlet NSProgressIndicator *WaitFind;
+//@property (weak) IBOutlet MyButton *btnDelSelDato;
+//@property (weak) IBOutlet MyButton *btnCopyTrd;
+//@property (weak) IBOutlet MyButton *btnConjWrd;
+//@property (weak) IBOutlet MyButton *btnTrdWrd;
+
+
 - (IBAction)OnChangeFrase:(NSSearchField *)sender;
 - (IBAction)OnDelAllDatos:(NSButton *)sender;
-- (IBAction)DelEntry:(NSButton *)sender;
-- (IBAction)CopyTrd:(NSButton *)sender;
 - (IBAction)OnSwapDict:(MyButton *)sender;
 - (IBAction)OnConjQuery:(MyButton *)sender;
 - (IBAction)OnCloseConjPanel:(id)sender;
-- (IBAction)OnConjWord:(MyButton *)sender;
-- (IBAction)OnTrdWord:(MyButton *)sender;
+
+//- (IBAction)OnConjWord:(MyButton *)sender;
+//- (IBAction)OnTrdWord:(MyButton *)sender;
+//- (IBAction)DelEntry:(NSButton *)sender;
+//- (IBAction)CopyTrd:(NSButton *)sender;
 
 - (IBAction)OnShowCojugator:(MyButton *)sender;
 - (IBAction)OnShowAvancedFind:(MyButton *)sender;
@@ -168,25 +171,15 @@
   [_ZonaDatos ClearDatos];
 
   [ZoneDatosView SelectDatos:nil];
-
-  [Ctrller DisenableBtns:All_BTNS];
+  
+  _btnDelAllDatos.hidden = true;
   }
 
 //--------------------------------------------------------------------------------------------------------------------------------------------------------
 // Borra la entrada seleccionada
-- (IBAction)DelEntry:(NSButton *)sender
+- (void) DelEntry
   {
   [_ZonaDatos DeleteSelectedDatos];
-  }
-
-//--------------------------------------------------------------------------------------------------------------------------------------------------------
-// Copia al portapapeles el texto seleccionado o el texto traducido
-- (IBAction)CopyTrd:(NSButton *)sender
-  {
-  DatosView* sel = ZoneDatosView.SelectedDatos;
-  if( sel==nil ) return;
-  
-  [sel CopyText];
   }
 
 //--------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -228,16 +221,16 @@
 
 //--------------------------------------------------------------------------------------------------------------------------------------------------------
 // Se llama para conjugar una palabra en la vista de datos
-- (IBAction)OnConjWord:(MyButton *)sender
+- (void) ConjWordOnData
   {
   DatosView* selDatos = [ZoneDatosView SelectedDatos];
-
+  
   int lang;
   NSString* selWrd = [selDatos getSelWordAndLang:&lang];
-
+  
   Conjs.Verb = selWrd;
   Conjs.ConjLang = lang;
-
+  
   [Conjs FindConjs];
   _ConjPanel.hidden = false;
   [self SetPanelIcon];
@@ -245,17 +238,17 @@
 
 //--------------------------------------------------------------------------------------------------------------------------------------------------------
 // Se llama para buscar las traducciones de una palabra en la vista de datos
-- (IBAction)OnTrdWord:(MyButton *)sender
+
+- (void) TrdWordOnData
   {
-  [_WaitFind startAnimation:self];
-
   DatosView* selDatos = [ZoneDatosView SelectedDatos];
-
+  
   int src = selDatos.src;
   int des = selDatos.des;
-
-  _btnTrdWrd.title = @"";
-  _btnTrdWrd.enabled = FALSE;
+  
+  NSButton* btn = BtnsData.BtnFindWord;
+  btn.title = @"";
+  btn.enabled = FALSE;
   
   int lang;
   NSString* selWrd = [selDatos getSelWordAndLang:&lang];
@@ -265,21 +258,20 @@
       {
       NSString* rootWrd = [ConjCore FindRootWord:selWrd Lang:des];
       
-      if( ![self GetViewDataForWord:rootWrd Src:des Des:src] )
-        {
+      if( rootWrd==nil || ![self GetViewDataForWord:rootWrd Src:des Des:src] )
         [self ShowMsg:@"NoFindWrd" WithTitle:@"TitleFindMeans"];
-        _btnTrdWrd.enabled = TRUE;
-        }
       }
     }
-
-  [_WaitFind stopAnimation:self];
+  
+  btn.enabled = TRUE;
   }
 
 //--------------------------------------------------------------------------------------------------------------------------------------------------------
 // Busca el la palabra en el diccionario y agrega una vista con sus datos
 - (BOOL) GetViewDataForWord:(NSString*) sWord Src:(int)src Des:(int)des
   {
+  //if( sWord==nil ) return FALSE;
+  
   EntryIndex* idx = FindIndexsForWord(sWord, src, des);
   if( idx == nil ) return FALSE;
   
@@ -398,41 +390,6 @@ static NSDictionary* attrWrd = @{ NSFontAttributeName:fontBold };
   SortEntries = [SortedIndexs SortEntries:FoundEntries QueryPlus:query Options:sw];    // Organiza las palabras por su ranking
 
   [_tableFrases reloadData];                                                // Actualiza el contenido de la lista
-  }
-
-
-//--------------------------------------------------------------------------------------------------------------------------------------------------------
-// Habilita los botones especificados en 'sw'
-- (void) EnableBtns:(int) sw
-  {
-  if( sw & DEL_ALL   ) _btnDelAllDatos.enabled = TRUE;
-  if( sw & DEL_SEL   ) _btnDelSelDato.enabled  = TRUE;
-  if( sw & COPY_TEXT ) _btnCopyTrd.enabled     = TRUE;
-  if( sw & CONJ_WRD  ) _btnConjWrd.enabled     = TRUE;
-  if( sw & TRD_WRD   )
-    {
-    int lng = [ZoneDatosView SelectedDatos].src;
-    _btnTrdWrd.title = LGFlag(lng);                                 // Pone la bandera del idioma
-    _btnTrdWrd.enabled = TRUE;
-    }
-  
-  [_btnConjWrd.window invalidateCursorRectsForView:_btnConjWrd];
-  }
-//--------------------------------------------------------------------------------------------------------------------------------------------------------
-// Deshabilita los botones especificados en 'sw'
-- (void) DisenableBtns:(int) sw
-  {
-  if( sw & DEL_ALL   ) _btnDelAllDatos.enabled = FALSE;
-  if( sw & DEL_SEL   ) _btnDelSelDato.enabled  = FALSE;
-  if( sw & COPY_TEXT ) _btnCopyTrd.enabled     = FALSE;
-  if( sw & CONJ_WRD  ) _btnConjWrd.enabled     = FALSE;
-  if( sw & TRD_WRD   )
-    {
-    _btnTrdWrd.title = @"";
-    _btnTrdWrd.enabled   = FALSE;
-    }
-  
-  [_btnConjWrd.window invalidateCursorRectsForView:_btnConjWrd];
   }
 
 //--------------------------------------------------------------------------------------------------------------------------------------------------------

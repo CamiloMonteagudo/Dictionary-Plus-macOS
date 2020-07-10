@@ -36,7 +36,8 @@ static DatosView* DatosSel;
   CGFloat     w = self.superview.bounds.size.width;                  // Ancho del contenido del scroll
   DatosView* Datos = [DatosView DatosForIndex:Idx With:w];           // Crea vista de datos nueva
 
-  [Ctrller EnableBtns:DEL_ALL];                                      // Habilita el botón para borrar los datos
+  Ctrller.btnDelAllDatos.hidden  = FALSE;                            // Habilita el botón para borrar los datos
+  Ctrller.btnDelAllDatos.enabled = TRUE;      
 
   [ZoneDatosView SelectDatos:Datos];
 
@@ -132,21 +133,9 @@ static DatosView* DatosSel;
 // Pone los datos identificados por 'view' como datos seleccionados
 +(void) SelectDatos:(DatosView*) view
   {
-  DatosView* oldSel = DatosSel;
-
   DatosSel = view;
 
-  if( view!=nil )
-    {
-    [Ctrller EnableBtns: DEL_SEL | COPY_TEXT];
-    [view setNeedsDisplay:TRUE];
-    }
-  else
-    {
-    [Ctrller DisenableBtns: DEL_SEL | COPY_TEXT | CONJ_WRD | TRD_WRD];
-    }
-
-  if( oldSel!=nil ) [oldSel setNeedsDisplay:TRUE];
+  if( view!=nil ) [view SelectedDatos];
   }
 
 //--------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -158,7 +147,7 @@ static DatosView* DatosSel;
 
 //--------------------------------------------------------------------------------------------------------------------------------------------------------
 // Borra los datos seleccionados
--(void) DeleteSelectedDatos
+- (void) DeleteSelectedDatos
   {
   NSInteger n = self.subviews.count;
   DatosView* next = nil;
@@ -179,7 +168,7 @@ static DatosView* DatosSel;
 
   [self resizeWithOldSuperviewSize: NSMakeSize(0, 0)];
 
-  if( n<2 ) [Ctrller DisenableBtns:All_BTNS];
+  if( n<2 ) Ctrller.btnDelAllDatos.hidden = TRUE;                             // Quita el botón para borrar los datos
   }
 
 @end

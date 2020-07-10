@@ -1,6 +1,6 @@
 "UILang" = "3";
 
-"WinTitle"       = "Dictionnaire de Traduction";
+"WinTitle"       = "Dictionary Plus";
 "TitleFindMeans" = "Recherche de significations";           
 "NoFindWrd"      = "Le mot n'est pas dans le dictionnaire";              
 "NoFindWrdEntry" = "Il n'y a pas d'entrée dans le dictionnaire pour ce mot"; 
@@ -23,6 +23,12 @@
 "DictChaged"    = "* Le dictionnaire a changé";                             
 "NoInDict"      = "* Le mot n'est pas dans le dictionnaire";                   
 "SustWord"      = "Mot: ";
+
+"TTipBtnSustMark" = "";
+"TTipBtnDelDato"  = "Supprimer les données de la signification sélectionnée";
+"TTipBtnCopyText" = "Copie texte sélectionné ou traduit";
+"TTipBtnCnjWord"  = "Conjugue le mot sélectionné dans la zone de données";
+"TTipBtnTrdWord"  = "Traduit le mot sélectionné dans la zone de données";
 
 "Adverbio"     = "Adverbe";
 "Animal"       = "Animal";

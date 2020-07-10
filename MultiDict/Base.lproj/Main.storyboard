@@ -13,11 +13,11 @@
                 <application id="hnw-xV-0zn" sceneMemberID="viewController">
                     <menu key="mainMenu" title="Main Menu" systemMenu="main" id="AYu-sK-qS6">
                         <items>
-                            <menuItem title="Translation Dictionary" id="1Xt-HY-uBw">
+                            <menuItem title="Dictionary Plus (Spanish Pack)" id="1Xt-HY-uBw">
                                 <modifierMask key="keyEquivalentModifierMask"/>
-                                <menu key="submenu" title="Translation Dictionary" id="uQy-DD-JDr">
+                                <menu key="submenu" title="Dictionary Plus (Spanish Pack)" id="uQy-DD-JDr">
                                     <items>
-                                        <menuItem title="About Translation Dictionary" id="5kV-Vb-QxS">
+                                        <menuItem title="About Dictionary Plus (Spanish Pack)" id="5kV-Vb-QxS">
                                             <modifierMask key="keyEquivalentModifierMask"/>
                                             <connections>
                                                 <action selector="ShowStandarAbout:" target="Voe-Tx-rLC" id="Lle-c1-7K7"/>
@@ -29,7 +29,7 @@
                                             <menu key="submenu" title="Services" systemMenu="services" id="hz9-B4-Xy5"/>
                                         </menuItem>
                                         <menuItem isSeparatorItem="YES" id="4je-JR-u6R"/>
-                                        <menuItem title="Hide Translation Dictionary" keyEquivalent="h" id="Olw-nP-bQN">
+                                        <menuItem title="Hide Dictionary Plus (Spanish Pack)" keyEquivalent="h" id="Olw-nP-bQN">
                                             <connections>
                                                 <action selector="hide:" target="Ady-hI-5gd" id="PnN-Uc-m68"/>
                                             </connections>
@@ -47,7 +47,7 @@
                                             </connections>
                                         </menuItem>
                                         <menuItem isSeparatorItem="YES" id="kCx-OE-vgT"/>
-                                        <menuItem title="Quit Translation Dictionary" keyEquivalent="q" id="4sb-4s-VLi">
+                                        <menuItem title="Quit Dictionary Plus (Spanish Pack)" keyEquivalent="q" id="4sb-4s-VLi">
                                             <connections>
                                                 <action selector="terminate:" target="Ady-hI-5gd" id="Te7-pn-YzF"/>
                                             </connections>
@@ -545,70 +545,7 @@
                                                                 <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                                             </textFieldCell>
                                                         </textField>
-                                                        <button identifier="TipTrdWord" toolTip="Translates the selected word in the data area" allowsExpansionToolTips="YES" translatesAutoresizingMaskIntoConstraints="NO" id="y5y-aA-4vU" userLabel="TrdWord" customClass="MyButton">
-                                                            <rect key="frame" x="596" y="632" width="20" height="20"/>
-                                                            <constraints>
-                                                                <constraint firstAttribute="height" constant="20" id="gFh-q3-hB3"/>
-                                                                <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="20" id="szN-C9-dfC"/>
-                                                            </constraints>
-                                                            <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" alignment="center" enabled="NO" inset="2" id="aZs-cG-95m">
-                                                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                                                <font key="font" metaFont="system"/>
-                                                            </buttonCell>
-                                                            <connections>
-                                                                <action selector="OnTrdWord:" target="XfG-lQ-9wD" id="iRk-z4-kWS"/>
-                                                            </connections>
-                                                        </button>
-                                                        <progressIndicator autoresizesSubviews="NO" wantsLayer="YES" horizontalHuggingPriority="750" verticalHuggingPriority="750" maxValue="100" displayedWhenStopped="NO" bezeled="NO" indeterminate="YES" controlSize="small" style="spinning" translatesAutoresizingMaskIntoConstraints="NO" id="ueh-km-AtW" userLabel="WaitFind">
-                                                            <rect key="frame" x="598" y="634" width="16" height="16"/>
-                                                            <constraints>
-                                                                <constraint firstAttribute="width" constant="16" id="1m7-h3-zNU"/>
-                                                                <constraint firstAttribute="height" constant="16" id="hne-q1-hd0"/>
-                                                            </constraints>
-                                                        </progressIndicator>
-                                                        <button identifier="TipConjWord" toolTip="Conjugates the selected word in the data area" allowsExpansionToolTips="YES" translatesAutoresizingMaskIntoConstraints="NO" id="r1N-nu-HCM" userLabel="ConjWrd" customClass="MyButton">
-                                                            <rect key="frame" x="621" y="632" width="20" height="20"/>
-                                                            <constraints>
-                                                                <constraint firstAttribute="width" constant="20" id="Jcs-Y5-IEj"/>
-                                                                <constraint firstAttribute="height" constant="20" id="wxB-Zw-dgt"/>
-                                                            </constraints>
-                                                            <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="ConjVerb2" imagePosition="only" alignment="center" enabled="NO" inset="2" id="2rb-xY-KVX">
-                                                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                                                <font key="font" metaFont="system"/>
-                                                            </buttonCell>
-                                                            <connections>
-                                                                <action selector="OnConjWord:" target="XfG-lQ-9wD" id="GIC-sy-q0n"/>
-                                                            </connections>
-                                                        </button>
-                                                        <button identifier="TipCopyText" toolTip="Copy selected or transted text" focusRingType="exterior" allowsExpansionToolTips="YES" translatesAutoresizingMaskIntoConstraints="NO" id="f9A-2g-pqJ" userLabel="CopyTrd" customClass="MyButton">
-                                                            <rect key="frame" x="646" y="632" width="20" height="20"/>
-                                                            <constraints>
-                                                                <constraint firstAttribute="width" constant="20" id="k8Y-zi-XXb"/>
-                                                                <constraint firstAttribute="height" constant="20" id="z7p-U6-8wJ"/>
-                                                            </constraints>
-                                                            <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="Copy" imagePosition="only" alignment="center" enabled="NO" focusRingType="exterior" inset="2" id="XeX-si-ZA6">
-                                                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                                                <font key="font" metaFont="system"/>
-                                                            </buttonCell>
-                                                            <connections>
-                                                                <action selector="CopyTrd:" target="XfG-lQ-9wD" id="3OT-UF-bKQ"/>
-                                                            </connections>
-                                                        </button>
-                                                        <button identifier="TipDelSel" toolTip="Delete the data of the meaning selected" allowsExpansionToolTips="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zxd-bt-xSC" userLabel="DelEntry" customClass="MyButton">
-                                                            <rect key="frame" x="671" y="632" width="20" height="20"/>
-                                                            <constraints>
-                                                                <constraint firstAttribute="height" constant="20" id="18f-Tv-QxM"/>
-                                                                <constraint firstAttribute="width" constant="20" id="Tzb-Tr-WOr"/>
-                                                            </constraints>
-                                                            <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="DelMean" imagePosition="only" alignment="center" alternateImage="Copy" enabled="NO" inset="2" id="GG2-ey-p3Z">
-                                                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                                                <font key="font" metaFont="system"/>
-                                                            </buttonCell>
-                                                            <connections>
-                                                                <action selector="DelEntry:" target="XfG-lQ-9wD" id="LTe-MF-pVi"/>
-                                                            </connections>
-                                                        </button>
-                                                        <button identifier="TipDelAll" toolTip="Clear all data of meanings" allowsExpansionToolTips="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Nd3-kZ-Fxc" userLabel="DelAll" customClass="MyButton">
+                                                        <button identifier="TipDelAll" hidden="YES" toolTip="Clear all data of meanings" allowsExpansionToolTips="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Nd3-kZ-Fxc" userLabel="DelAll" customClass="MyButton">
                                                             <rect key="frame" x="696" y="632" width="20" height="20"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="20" id="K8X-yC-HnY"/>
@@ -625,7 +562,7 @@
                                                         <scrollView horizontalLineScroll="10" horizontalPageScroll="40" verticalLineScroll="10" verticalPageScroll="40" hasHorizontalScroller="NO" horizontalScrollElasticity="none" translatesAutoresizingMaskIntoConstraints="NO" id="UVS-ze-XiF" userLabel="Scroll Datos">
                                                             <rect key="frame" x="2" y="0.0" width="742" height="631"/>
                                                             <clipView key="contentView" copiesOnScroll="NO" id="cXM-mj-aAI">
-                                                                <rect key="frame" x="1" y="1" width="725" height="629"/>
+                                                                <rect key="frame" x="1" y="1" width="740" height="629"/>
                                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                                 <subviews>
                                                                     <view focusRingType="none" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4WZ-DZ-eZo" userLabel="ZonaDatos" customClass="ZoneDatosView">
@@ -639,7 +576,7 @@
                                                                 <autoresizingMask key="autoresizingMask"/>
                                                             </scroller>
                                                             <scroller key="verticalScroller" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="h6M-7A-Y3r">
-                                                                <rect key="frame" x="726" y="1" width="15" height="629"/>
+                                                                <rect key="frame" x="725" y="1" width="16" height="629"/>
                                                                 <autoresizingMask key="autoresizingMask"/>
                                                             </scroller>
                                                         </scrollView>
@@ -647,24 +584,14 @@
                                                     <constraints>
                                                         <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="300" id="2FH-Ao-I7v"/>
                                                         <constraint firstItem="UVS-ze-XiF" firstAttribute="top" secondItem="ifn-CH-qtD" secondAttribute="bottom" constant="3" id="4Rm-2S-y7f"/>
-                                                        <constraint firstItem="Nd3-kZ-Fxc" firstAttribute="leading" secondItem="zxd-bt-xSC" secondAttribute="trailing" constant="5" id="6Ab-xY-rUj"/>
                                                         <constraint firstAttribute="trailing" secondItem="UVS-ze-XiF" secondAttribute="trailing" constant="2" id="8OE-kX-Dzm"/>
                                                         <constraint firstAttribute="bottom" secondItem="UVS-ze-XiF" secondAttribute="bottom" id="AOV-rr-QMm"/>
-                                                        <constraint firstItem="f9A-2g-pqJ" firstAttribute="leading" secondItem="r1N-nu-HCM" secondAttribute="trailing" constant="5" id="CcV-1h-QUS"/>
-                                                        <constraint firstItem="f9A-2g-pqJ" firstAttribute="centerY" secondItem="zxd-bt-xSC" secondAttribute="centerY" id="FgB-UO-b7W"/>
-                                                        <constraint firstItem="zxd-bt-xSC" firstAttribute="leading" secondItem="f9A-2g-pqJ" secondAttribute="trailing" constant="5" id="HGc-M3-Zhg"/>
-                                                        <constraint firstItem="ueh-km-AtW" firstAttribute="centerY" secondItem="y5y-aA-4vU" secondAttribute="centerY" id="I84-Y8-EHp"/>
-                                                        <constraint firstItem="zxd-bt-xSC" firstAttribute="centerY" secondItem="Nd3-kZ-Fxc" secondAttribute="centerY" id="INR-HI-erm"/>
-                                                        <constraint firstItem="ueh-km-AtW" firstAttribute="centerX" secondItem="y5y-aA-4vU" secondAttribute="centerX" id="Ig4-Q5-0u6"/>
                                                         <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="ifn-CH-qtD" secondAttribute="trailing" constant="20" symbolic="YES" id="JqN-0m-V6M"/>
                                                         <constraint firstItem="ifn-CH-qtD" firstAttribute="leading" secondItem="mEC-x2-aVe" secondAttribute="leading" constant="4" id="KSN-kA-zfb"/>
                                                         <constraint firstAttribute="trailing" secondItem="Nd3-kZ-Fxc" secondAttribute="trailing" constant="30" id="S2F-p5-DAy"/>
                                                         <constraint firstItem="Nd3-kZ-Fxc" firstAttribute="centerY" secondItem="ifn-CH-qtD" secondAttribute="centerY" id="fC5-jo-bEc"/>
                                                         <constraint firstItem="ifn-CH-qtD" firstAttribute="top" secondItem="mEC-x2-aVe" secondAttribute="top" id="ftF-Dc-LK2"/>
-                                                        <constraint firstItem="r1N-nu-HCM" firstAttribute="leading" secondItem="y5y-aA-4vU" secondAttribute="trailing" constant="5" id="m65-IV-HX7"/>
                                                         <constraint firstItem="UVS-ze-XiF" firstAttribute="leading" secondItem="mEC-x2-aVe" secondAttribute="leading" constant="2" id="pzd-Ts-5fl"/>
-                                                        <constraint firstItem="r1N-nu-HCM" firstAttribute="centerY" secondItem="f9A-2g-pqJ" secondAttribute="centerY" id="rXO-us-NQg"/>
-                                                        <constraint firstItem="y5y-aA-4vU" firstAttribute="centerY" secondItem="r1N-nu-HCM" secondAttribute="centerY" id="zVF-hT-Mrk"/>
                                                     </constraints>
                                                 </customView>
                                                 <customView hidden="YES" id="Dwa-C0-Qv4" userLabel="Conjugaciones">
@@ -862,16 +789,11 @@
                         <outlet property="CbLangs" destination="K9Q-df-Wgp" id="IVV-FE-FaD"/>
                         <outlet property="ConjPanel" destination="Dwa-C0-Qv4" id="Xx6-Ue-BFL"/>
                         <outlet property="FindConj" destination="xPw-ch-69n" id="9E2-Sa-xFH"/>
-                        <outlet property="WaitFind" destination="ueh-km-AtW" id="26V-dn-scj"/>
                         <outlet property="WaitForDict" destination="Ggb-fw-wVE" id="dck-Hs-gPq"/>
                         <outlet property="ZonaDatos" destination="4WZ-DZ-eZo" id="7YN-jG-7Qg"/>
                         <outlet property="btnConjPanel" destination="SZb-DW-xi4" id="vSa-Hv-cGt"/>
-                        <outlet property="btnConjWrd" destination="r1N-nu-HCM" id="JrB-6Q-4rS"/>
-                        <outlet property="btnCopyTrd" destination="f9A-2g-pqJ" id="drE-IM-cot"/>
                         <outlet property="btnDelAllDatos" destination="Nd3-kZ-Fxc" id="nr8-C7-TSv"/>
-                        <outlet property="btnDelSelDato" destination="zxd-bt-xSC" id="QT6-ay-Ktv"/>
                         <outlet property="btnSwapDict" destination="Zpj-ef-RQF" id="DmL-7d-sjp"/>
-                        <outlet property="btnTrdWrd" destination="y5y-aA-4vU" id="VTf-KV-7G7"/>
                         <outlet property="lstConjugates" destination="naW-7Z-ubT" id="IsW-NE-HrG"/>
                         <outlet property="tableFrases" destination="IXF-Kw-OTU" id="HfP-y1-wjq"/>
                         <outlet property="txtFrase" destination="2aa-vJ-rpd" id="zJr-qT-EI1"/>
@@ -1437,9 +1359,7 @@
     </scenes>
     <resources>
         <image name="ConjVerb2" width="20" height="20"/>
-        <image name="Copy" width="20" height="20"/>
         <image name="DelDato" width="20" height="20"/>
-        <image name="DelMean" width="20" height="20"/>
         <image name="Exchange" width="20" height="20"/>
         <image name="FindPlus" width="20" height="20"/>
         <image name="NSListViewTemplate" width="14" height="10"/>

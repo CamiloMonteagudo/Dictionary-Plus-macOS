@@ -3,7 +3,7 @@
 "01K-Zo-5y3.title" = "Significations";
 
 /* Class = "NSMenuItem"; title = "Translation Dictionary"; ObjectID = "1Xt-HY-uBw"; */
-"1Xt-HY-uBw.title" = "Dictionnaire de Traduction";
+"1Xt-HY-uBw.title" = "Dictionary Plus (Spanish Pack)";
 
 /* Class = "NSMenu"; title = "Find"; ObjectID = "1b7-l0-nxx"; */
 "1b7-l0-nxx.title" = "Rechercher";
@@ -24,13 +24,13 @@
 "4EN-yA-p0u.title" = "Rechercher";
 
 /* Class = "NSMenuItem"; title = "Quit Translation Dictionary"; ObjectID = "4sb-4s-VLi"; */
-"4sb-4s-VLi.title" = "Quitter Dictionnaire de Traduction";
+"4sb-4s-VLi.title" = "Quitter Dictionary Plus (Spanish Pack)";
 
 /* Class = "NSMenuItem"; title = "Edit"; ObjectID = "5QF-Oa-p0T"; */
 "5QF-Oa-p0T.title" = "Édition";
 
 /* Class = "NSMenuItem"; title = "About Translation Dictionary"; ObjectID = "5kV-Vb-QxS"; */
-"5kV-Vb-QxS.title" = "À propos de Dictionnaire de Traduction";
+"5kV-Vb-QxS.title" = "À propos de Dictionary Plus (Spanish Pack)";
 
 /* Class = "NSMenuItem"; title = "Redo"; ObjectID = "6dh-zS-Vam"; */
 "6dh-zS-Vam.title" = "Rétablir";
@@ -99,7 +99,7 @@
 "Nd3-kZ-Fxc.ibShadowedToolTip" = "Effacer toutes les données de significations";
 
 /* Class = "NSMenuItem"; title = "Hide Translation Dictionary"; ObjectID = "Olw-nP-bQN"; */
-"Olw-nP-bQN.title" = "Masquer Dictionnaire de Traduction";
+"Olw-nP-bQN.title" = "Masquer Dictionary Plus (Spanish Pack)";
 
 /* Class = "NSMenuItem"; title = "Find Previous"; ObjectID = "OwM-mh-QMV"; */
 "OwM-mh-QMV.title" = "Rechercher précédent";
@@ -297,7 +297,7 @@
 "uEc-Tj-fk0.title" = "Afficher uniquement les entrées avec tous les mots";
 
 /* Class = "NSMenu"; title = "Translation Dictionary"; ObjectID = "uQy-DD-JDr"; */
-"uQy-DD-JDr.title" = "Dictionnaire de Traduction";
+"uQy-DD-JDr.title" = "Dictionary Plus (Spanish Pack)";
 
 /* Class = "NSMenuItem"; title = "Cut"; ObjectID = "uRl-iY-unG"; */
 "uRl-iY-unG.title" = "Couper";

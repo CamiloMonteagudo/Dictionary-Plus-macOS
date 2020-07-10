@@ -55,6 +55,8 @@ extern NSCharacterSet* PntOrSpc;
 extern NSCharacterSet* TrimSpc;
 
 extern NSColor* SelColor;
+extern NSColor* SustColor;
+extern NSColor* BackColor;
 
 //===================================================================================================================================================
 extern NSString*  LGFlag( int lng);

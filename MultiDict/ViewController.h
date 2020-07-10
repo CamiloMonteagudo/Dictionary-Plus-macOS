@@ -14,11 +14,18 @@
 @property (weak) IBOutlet NSSearchField *txtFrase;
 @property (weak) IBOutlet NSTableView *tableFrases;
 
-- (void) EnableBtns:(int) sw;
-- (void) DisenableBtns:(int) sw;
+@property (weak) IBOutlet NSButton *btnDelAllDatos;
+
+//- (void) EnableBtns:(int) sw;
+//- (void) DisenableBtns:(int) sw;
+
 - (void) ShowMsg:(NSString*) msg WithTitle:(NSString*) title;
 
 - (void) FindFrasesWithQuery:(TextQueryPlus*) query Options:(int) sw;
+
+- (void) DelEntry;
+- (void) ConjWordOnData;
+- (void) TrdWordOnData;
 
 @end
 //===================================================================================================================================================
