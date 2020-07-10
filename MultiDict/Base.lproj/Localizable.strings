@@ -1,0 +1,63 @@
+"UILang" = "1";
+
+"WinTitle"       = "Dictionay Plus";
+"TitleFindMeans" = "Looking for meanings";
+"NoFindWrd"      = "The word is not in the dictionary";
+"NoFindWrdEntry" = "There is no a entry into the dictionary for that word";
+
+"TitleConj"     = "Conjugations";
+"NoVerbInQuery" = "No verb was found in the query box";
+
+"TitleFindPlus" = "Advanced search";
+"NoStringFind"  = "Type word or phrase to search";
+"WriteNewWord"  = "Type a word similar to the selected";
+"WordExist"     = "The word already exists";
+"WordNoVerb"    = "The word is not a verb";
+
+"ConjLabel"       = "Conjugations";
+"ConjViewWords"   = "By words";
+"ConjViewModes"   = "By modes";
+"ConjViewPersons" = "By person";
+
+"Sustituciones" = "Replacements";
+"DictChaged"    = "* Dictionay has changed";
+"NoInDict"      = "* No was found in the dictionary";
+"SustWord"      = "Word: ";
+
+"Adverbio"     = "Adverb";
+"Animal"       = "Animal";
+"Año"          = "Year";
+"Apellido"     = "Last name";
+"Carro"        = "Car";
+"Comida"       = "Food";
+"Día"          = "Day";
+"Dinero"       = "Money";
+"Dispositivo"  = "Device";
+"Empresa"      = "Company";
+"Escuela"      = "School";
+"Fecha"        = "Date";
+"Formato"      = "Format";
+"Gentilicio"   = "Gentilicio";
+"Grupo"        = "Grupo";
+"Hora"         = "Time";
+"Idioma"       = "Languaje";
+"Lenguaje"     = "Languaje";
+"Libro"        = "Libro";
+"Lugar"        = "Place";
+"Número"       = "Number";
+"Nro Cardinal" = "Cardinal #";
+"Nro Romano"   = "Roman #";
+"Mes"          = "Month";
+"Moneda"       = "Currency";
+"Objeto"       = "Object";
+"Página Web"   = "Website";
+"Palabra"      = "Word";
+"Persona"      = "Person";
+"Planeta"      = "Planet";
+"Porciento"    = "Percent";
+"Profesión"    = "Profession";
+"Sustancia"    = "Sustancia";
+"Tamaño"       = "Size";
+"Tiempo"       = "Tiempo";
+"Teléfono"     = "Phone";
+"Rio"          = "River";

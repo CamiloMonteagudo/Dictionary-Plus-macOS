@@ -1,0 +1,65 @@
+"UILang" = "0";
+
+"WinTitle"       = "Diccionario Plus";
+"TitleFindMeans" = "Buscando significados";
+"NoFindWrd"      = "La palabra no se encuentra en el diccionario";
+"NoFindWrdEntry" = "No existe una entrada en el diccionario para esa palabra";
+
+"TitleConj"     = "Conjugaciones";
+"NoVerbInQuery" = "No se encontró ningún verbo en el cuadro de consulta";
+
+"TitleFindPlus" = "Búsqueda avanzada";
+"NoStringFind"  = "Escriba la palabra o frase a buscar";
+"WriteNewWord"  = "Escriba una palabra similar a la seleccionada";
+"WordExist"     = "La palabra ya existe";
+"WordNoVerb"    = "La palabra no es un verbo";
+
+"ConjLabel"       = "Conjugaciones";
+"ConjViewWords"   = "Por palabras";
+"ConjViewModes"   = "Por modos";
+"ConjViewPersons" = "Por personas";
+
+"Sustituciones" = "Sustituciones";
+"DictChaged"    = "* El diccionario ha cambiado";
+"NoInDict"      = "* No se encontró en el diccionario";
+"SustWord"      = "Palabra: ";
+
+"Adverbio"     = "Adverbio";
+"Animal"       = "Animal";
+"Año"          = "Año";
+"Apellido"     = "Apellido";
+"Carro"        = "Carro";
+"Comida"       = "Comida";
+"Día"          = "Día";
+"Dinero"       = "Dinero";
+"Dispositivo"  = "Dispositivo";
+"Empresa"      = "Empresa";
+"Escuela"      = "Escuela";
+"Fecha"        = "Fecha";
+"Formato"      = "Formato";
+"Gentilicio"   = "Gentile";
+"Grupo"        = "Group";
+"Hora"         = "Hora";
+"Idioma"       = "Idioma";
+"Lenguaje"     = "Lenguaje";
+"Libro"        = "Book";
+"Lugar"        = "Lugar";
+"Número"       = "Número";
+"Nro Cardinal" = "# Cardinal";
+"Nro Romano"   = "# Romano";
+"Mes"          = "Mes";
+"Moneda"       = "Moneda";
+"Objeto"       = "Objeto";
+"Página Web"   = "Página Web";
+"Palabra"      = "Palabra";
+"Persona"      = "Persona";
+"Planeta"      = "Planeta";
+"Porciento"    = "Porciento";
+"Profesión"    = "Profesión";
+"Sustancia"    = "Substance";
+"Tamaño"       = "Tamaño";
+"Tiempo"       = "Time";
+"Teléfono"     = "Teléfono";
+"Rio"          = "Rio";
+
+
