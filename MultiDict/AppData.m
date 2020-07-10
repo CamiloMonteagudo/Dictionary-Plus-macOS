@@ -62,10 +62,16 @@ static NSString * _LngFlags[LGCount] =  {@"🇪🇸", @"🇺🇸", @"🇮🇹", 
 //static int _InstDes[] = {   0,    2,    3,    1,    2,    3,    0,    1,    3,    0,    1,    2 };
 
 // Paquete de Español
+//                         EnIt, ItEn
+static int _InstSrc[]  = {   1,    2, };
+static int _InstDes[]  = {   2,    1, };
+static int _InstConj[] = {   1,    2  };
+
+// Paquete de Español
 //                         EsEn, EsIt, EsFr, EnEs, ItEs, FrEs
-static int _InstSrc[]  = {   0,    0,    0,    1,    2,    3, };
-static int _InstDes[]  = {   1,    2,    3,    0,    0,    0, };
-static int _InstConj[] = { 0, 1, 2, 3 };
+//static int _InstSrc[]  = {   0,    0,    0,    1,    2,    3, };
+//static int _InstDes[]  = {   1,    2,    3,    0,    0,    0, };
+//static int _InstConj[] = { 0, 1, 2, 3 };
 
 /* (En-Es)
 //                        EnEs, EsEn

@@ -5,11 +5,14 @@ DD3  |Adverbio     |{fácilmente}          |{easily}             |{facilmente}  
 DD4  |Adverbio     |{todo}                |{all}                |{tutto}              |{tout}   
 DD5  |Adverbio     |{quizás}              |{maybe}              |{magari}             |{peut-être}   
 NA1  |Animal       |{perros}              |{dogs}               |{cani}               |{chiens}     
+NA2  |Animal       |{gato}                |{cat}                |{gatto}              |{le chat}     
+NA3  |Animal       |{perro}               |{dog}                |{cane}               |{chien}     
 GY1  |Año          |{2014}                |{2014}               |{2014}               |{2014}    
 GY2  |Año          |{2016}                |{2016}               |{2016}               |{2016}    
 GY3  |Año          |{90}                  |{90}                 |{90}                 |{90}
 PN1  |Apellido     |{Smith}               |{Smith}              |{Smith}              |{Smith}    
-NCa1 |Carro        |{Ferrari}             |{Ferrari}            |{Ferrari}            |{Ferrari}
+NCa1 |Vehiculo     |{Ferrari}             |{Ferrari}            |{Ferrari}            |{Ferrari}
+NCa2 |Vehiculo     |{Ford}                |{Ford}               |{Ford}               |{Ford}
 CO1  |Comida       |{pizza}               |{pizza}              |{pizza}              |{pizza}
 CO2  |Comida       |{té}                  |{tea}                |{tè}                 |{thé}
 NS1  |Día          |{martes}              |{tuesday}            |{martedì}            |{mardi}    
@@ -48,6 +51,7 @@ NL7  |Lugar        |{la Torre de Eiffel}  |{the Eiffel's Tower} |{la Torre de Ei
 NL8  |Lugar        |{museo}               |{museum}             |{musée}              |{museo}
 NL9  |Lugar        |{el teatro}           |{the theater}        |{il teatro}          |{le thétre}
 LH1  |Lugar        |{apartamento}         |{apartment}          |{appartamento}       |{appartement}
+LH2  |Lugar        |{América}             |{America}            |{America}            |{Amérique}
 NN1  |Número       |{8}                   |{8}                  |{8}                  |{8}        
 NN2  |Número       |{1}                   |{1}                  |{1}                  |{1}        
 NN3  |Número       |{4}                   |{4}                  |{4}                  |{4}        
@@ -62,6 +66,7 @@ LL2  |Nro Romano   |{IV}                  |{IV}                 |{IV}           
 NM1  |Mes          |{enero}               |{january}            |{gennaio}            |{janvier}  
 NM2  |Mes          |{marzo}               |{march}              |{marzo}              |{mars}     
 NM3  |Mes          |{agosto}              |{august}             |{agosto}             |{août}   
+NM4  |Mes          |{diciembre}           |{december}           |{dicembre}           |{décembre}   
 MD1  |Moneda       |{dolar}               |{dollar}             |{dollaro}            |{dollar}
 MD2  |Moneda       |{euro}                |{euro}               |{euro}               |{euro}
 NO1  |Objeto       |{manzanas}            |{apples}             |{mele}               |{pomme}   
@@ -75,11 +80,11 @@ WD3  |Palabra      |{aniversario}         |{anniversary}        |{anniversario} 
 WD4  |Palabra      |{trabajo}             |{work}               |{lavoro}             |{travail}
 WD5  |Palabra      |{reunión}             |{meeting}            |{riunioni}           |{réunion}
 WD6  |Palabra      |{fútbol}              |{football}           |{football}           |{football}
-NP1  |Persona      |{Juan}                |{John}               |{Giovanni}           |{Jean}     
-NP2  |Persona      |{Maria}               |{Mary}               |{Maria}              |{Marie}    
-NP3  |Persona      |{Pedro}               |{Peter}              |{Pietro}             |{Pierre}   
-NP4  |Persona      |{Ana}                 |{Anna}               |{Ana}                |{Ana}      
-NP5  |Persona      |{Juanito}             |{Johnny}             |{Johnny}             |{Johnny}     
+NP1  |Persona      |{Juan}                |{John}               |{Giovanni}           |{Jean}
+NP2  |Persona      |{Maria}               |{Mary}               |{Maria}              |{Marie}
+NP3  |Persona      |{Pedro}               |{Peter}              |{Pietro}             |{Pierre}
+NP4  |Persona      |{Ana}                 |{Anna}               |{Ana}                |{Ana}
+NP5  |Persona      |{Juanito}             |{Johnny}             |{Johnny}             |{Johnny}
 NPl1 |Planeta      |{tierra}              |{earth}              |{tierra}             |{tierra}
 NPl2 |Planeta      |{la Luna}             |{the Moon}           |{la Lune}            |{la Luna}
 NPl3 |Planeta      |{Jupiter}             |{Jupiter}            |{Giove}              |{Jupiter}
@@ -91,11 +96,12 @@ SN1  |Sustancia    |{peligrosas}          |{dangerous}          |{pericoloso}   
 CS1  |Tamaño       |{25}                  |{25}                 |{25}                 |{25}         
 CS2  |Tamaño       |{pequeño}             |{small}              |{piccolo}            |{petit}
 TM1  |Tiempo       |{noche}               |{night}              |{notte}              |{nuit}
-NT1  |Teléfono     |{9348529}             |{9348529}            |{9348529}            |{9348529}
+NT1  |Teléfono     |{934-8529}            |{934-8529}           |{934-8529}           |{934-8529}
 NR1  |Rio          |{Missipi}             |{Missipi}            |{Missipi}            |{Missipi}
 ST1  |Estado       |{saludable}           |{healthy}            |{sano}               |{salutaire}
 EC1  |Estado       |{soltero}             |{single}             |{single}             |{célibataire}
 CL1  |Color        |{azul}                |{blue}               |{blu}                |{bleu}
+EF1  |Enfermedad   |{dengue}              |{dengue}             |{dengue}             |{dengue}
 
 
 

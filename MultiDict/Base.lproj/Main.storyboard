@@ -13,11 +13,11 @@
                 <application id="hnw-xV-0zn" sceneMemberID="viewController">
                     <menu key="mainMenu" title="Main Menu" systemMenu="main" id="AYu-sK-qS6">
                         <items>
-                            <menuItem title="Dictionary Plus (Spanish Pack)" id="1Xt-HY-uBw">
+                            <menuItem title="Dictionary Plus (En-It)" id="1Xt-HY-uBw">
                                 <modifierMask key="keyEquivalentModifierMask"/>
-                                <menu key="submenu" title="Dictionary Plus (Spanish Pack)" id="uQy-DD-JDr">
+                                <menu key="submenu" title="Dictionary Plus (En-It)" id="uQy-DD-JDr">
                                     <items>
-                                        <menuItem title="About Dictionary Plus (Spanish Pack)" id="5kV-Vb-QxS">
+                                        <menuItem title="About Dictionary Plus (En-It)" id="5kV-Vb-QxS">
                                             <modifierMask key="keyEquivalentModifierMask"/>
                                             <connections>
                                                 <action selector="ShowStandarAbout:" target="Voe-Tx-rLC" id="Lle-c1-7K7"/>
@@ -29,7 +29,7 @@
                                             <menu key="submenu" title="Services" systemMenu="services" id="hz9-B4-Xy5"/>
                                         </menuItem>
                                         <menuItem isSeparatorItem="YES" id="4je-JR-u6R"/>
-                                        <menuItem title="Hide Dictionary Plus (Spanish Pack)" keyEquivalent="h" id="Olw-nP-bQN">
+                                        <menuItem title="Hide Dictionary Plus (En-It)" keyEquivalent="h" id="Olw-nP-bQN">
                                             <connections>
                                                 <action selector="hide:" target="Ady-hI-5gd" id="PnN-Uc-m68"/>
                                             </connections>
@@ -47,7 +47,7 @@
                                             </connections>
                                         </menuItem>
                                         <menuItem isSeparatorItem="YES" id="kCx-OE-vgT"/>
-                                        <menuItem title="Quit Dictionary Plus (Spanish Pack)" keyEquivalent="q" id="4sb-4s-VLi">
+                                        <menuItem title="Quit Dictionary Plus (En-It)" keyEquivalent="q" id="4sb-4s-VLi">
                                             <connections>
                                                 <action selector="terminate:" target="Ady-hI-5gd" id="Te7-pn-YzF"/>
                                             </connections>
@@ -562,7 +562,7 @@
                                                         <scrollView horizontalLineScroll="10" horizontalPageScroll="40" verticalLineScroll="10" verticalPageScroll="40" hasHorizontalScroller="NO" horizontalScrollElasticity="none" translatesAutoresizingMaskIntoConstraints="NO" id="UVS-ze-XiF" userLabel="Scroll Datos">
                                                             <rect key="frame" x="2" y="0.0" width="742" height="631"/>
                                                             <clipView key="contentView" copiesOnScroll="NO" id="cXM-mj-aAI">
-                                                                <rect key="frame" x="1" y="1" width="740" height="629"/>
+                                                                <rect key="frame" x="1" y="1" width="725" height="629"/>
                                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                                 <subviews>
                                                                     <view focusRingType="none" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4WZ-DZ-eZo" userLabel="ZonaDatos" customClass="ZoneDatosView">
@@ -576,7 +576,7 @@
                                                                 <autoresizingMask key="autoresizingMask"/>
                                                             </scroller>
                                                             <scroller key="verticalScroller" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="h6M-7A-Y3r">
-                                                                <rect key="frame" x="725" y="1" width="16" height="629"/>
+                                                                <rect key="frame" x="726" y="1" width="15" height="629"/>
                                                                 <autoresizingMask key="autoresizingMask"/>
                                                             </scroller>
                                                         </scrollView>
@@ -1249,7 +1249,7 @@
                                                         <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
                                                         <color key="backgroundColor" name="headerColor" catalog="System" colorSpace="catalog"/>
                                                     </tableHeaderCell>
-                                                    <textFieldCell key="dataCell" lineBreakMode="truncatingTail" selectable="YES" editable="YES" refusesFirstResponder="YES" alignment="left" title="Text Cell" id="Mtt-De-by9">
+                                                    <textFieldCell key="dataCell" lineBreakMode="truncatingTail" selectable="YES" refusesFirstResponder="YES" allowsUndo="NO" alignment="left" title="Text Cell" allowsEditingTextAttributes="YES" id="Mtt-De-by9">
                                                         <font key="font" metaFont="system"/>
                                                         <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                                         <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -1262,7 +1262,7 @@
                                                             <subviews>
                                                                 <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c76-ca-AWq">
                                                                     <rect key="frame" x="1" y="0.0" width="372" height="17"/>
-                                                                    <textFieldCell key="cell" lineBreakMode="truncatingTail" sendsActionOnEndEditing="YES" title="Table View Cell" allowsEditingTextAttributes="YES" id="pIO-5Y-kGc">
+                                                                    <textFieldCell key="cell" lineBreakMode="truncatingTail" selectable="YES" sendsActionOnEndEditing="YES" title="Table View Cell" allowsEditingTextAttributes="YES" id="pIO-5Y-kGc">
                                                                         <font key="font" metaFont="system"/>
                                                                         <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                                                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>

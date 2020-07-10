@@ -58,7 +58,7 @@
 "Objeto"       = "Objeto";
 "Página Web"   = "Página Web";
 "Palabra"      = "Palabra";
-"Persona"      = "Persona";
+"Persona"      = "Nombre";
 "Planeta"      = "Planeta";
 "Porciento"    = "Porciento";
 "Profesión"    = "Profesión";
@@ -69,6 +69,5 @@
 "Rio"          = "Río";
 "Estado"       = "Estado";
 "Color"        = "Color";
-
-
-
+"Color"        = "Color";
+"Enfermedad"   = "Enfermedad";
