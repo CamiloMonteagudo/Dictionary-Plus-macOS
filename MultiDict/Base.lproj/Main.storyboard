@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
     <dependencies>
-        <deployment identifier="macosx"/>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="12121"/>
         <capability name="box content view" minToolsVersion="7.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -13,11 +12,11 @@
                 <application id="hnw-xV-0zn" sceneMemberID="viewController">
                     <menu key="mainMenu" title="Main Menu" systemMenu="main" id="AYu-sK-qS6">
                         <items>
-                            <menuItem title="Dictionary Plus (En-It)" id="1Xt-HY-uBw">
+                            <menuItem title="Dictionary Plus (En-Fr)" id="1Xt-HY-uBw">
                                 <modifierMask key="keyEquivalentModifierMask"/>
-                                <menu key="submenu" title="Dictionary Plus (En-It)" id="uQy-DD-JDr">
+                                <menu key="submenu" title="Dictionary Plus (En-Fr)" id="uQy-DD-JDr">
                                     <items>
-                                        <menuItem title="About Dictionary Plus (En-It)" id="5kV-Vb-QxS">
+                                        <menuItem title="About Dictionary Plus (En-Fr)" id="5kV-Vb-QxS">
                                             <modifierMask key="keyEquivalentModifierMask"/>
                                             <connections>
                                                 <action selector="ShowStandarAbout:" target="Voe-Tx-rLC" id="Lle-c1-7K7"/>
@@ -29,7 +28,7 @@
                                             <menu key="submenu" title="Services" systemMenu="services" id="hz9-B4-Xy5"/>
                                         </menuItem>
                                         <menuItem isSeparatorItem="YES" id="4je-JR-u6R"/>
-                                        <menuItem title="Hide Dictionary Plus (En-It)" keyEquivalent="h" id="Olw-nP-bQN">
+                                        <menuItem title="Hide Dictionary Plus (En-Fr)" keyEquivalent="h" id="Olw-nP-bQN">
                                             <connections>
                                                 <action selector="hide:" target="Ady-hI-5gd" id="PnN-Uc-m68"/>
                                             </connections>
@@ -47,7 +46,7 @@
                                             </connections>
                                         </menuItem>
                                         <menuItem isSeparatorItem="YES" id="kCx-OE-vgT"/>
-                                        <menuItem title="Quit Dictionary Plus (En-It)" keyEquivalent="q" id="4sb-4s-VLi">
+                                        <menuItem title="Quit Dictionary Plus (En-Fr)" keyEquivalent="q" id="4sb-4s-VLi">
                                             <connections>
                                                 <action selector="terminate:" target="Ady-hI-5gd" id="Te7-pn-YzF"/>
                                             </connections>
@@ -451,7 +450,7 @@
                                                             <rect key="frame" x="0.0" y="0.0" width="434" height="631"/>
                                                             <clipView key="contentView" drawsBackground="NO" copiesOnScroll="NO" id="03Y-ok-244">
                                                                 <rect key="frame" x="1" y="1" width="432" height="629"/>
-                                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                                <autoresizingMask key="autoresizingMask"/>
                                                                 <subviews>
                                                                     <tableView verticalHuggingPriority="750" tag="102" allowsExpansionToolTips="YES" columnAutoresizingStyle="firstColumnOnly" alternatingRowBackgroundColors="YES" columnReordering="NO" multipleSelection="NO" autosaveColumns="NO" typeSelect="NO" rowHeight="22" viewBased="YES" floatsGroupRows="NO" id="IXF-Kw-OTU">
                                                                         <rect key="frame" x="0.0" y="0.0" width="432" height="629"/>
@@ -563,7 +562,7 @@
                                                             <rect key="frame" x="2" y="0.0" width="742" height="631"/>
                                                             <clipView key="contentView" copiesOnScroll="NO" id="cXM-mj-aAI">
                                                                 <rect key="frame" x="1" y="1" width="725" height="629"/>
-                                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                                <autoresizingMask key="autoresizingMask"/>
                                                                 <subviews>
                                                                     <view focusRingType="none" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4WZ-DZ-eZo" userLabel="ZonaDatos" customClass="ZoneDatosView">
                                                                         <rect key="frame" x="0.0" y="0.0" width="972" height="729"/>
@@ -625,7 +624,7 @@
                                                             <rect key="frame" x="2" y="29" width="147" height="680"/>
                                                             <clipView key="contentView" drawsBackground="NO" copiesOnScroll="NO" id="SBc-Pr-Pn5">
                                                                 <rect key="frame" x="1" y="1" width="145" height="678"/>
-                                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                                <autoresizingMask key="autoresizingMask"/>
                                                                 <subviews>
                                                                     <tableView verticalHuggingPriority="750" tag="102" allowsExpansionToolTips="YES" columnAutoresizingStyle="firstColumnOnly" selectionHighlightStyle="none" columnReordering="NO" columnResizing="NO" multipleSelection="NO" autosaveColumns="NO" typeSelect="NO" rowSizeStyle="automatic" viewBased="YES" id="naW-7Z-ubT">
                                                                         <rect key="frame" x="0.0" y="0.0" width="145" height="678"/>
@@ -823,7 +822,7 @@
                                 <rect key="frame" x="10" y="413" width="380" height="21"/>
                                 <clipView key="contentView" id="eHl-gg-Jmx">
                                     <rect key="frame" x="1" y="1" width="378" height="19"/>
-                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <textView importsGraphics="NO" verticallyResizable="NO" fieldEditor="YES" allowsNonContiguousLayout="YES" quoteSubstitution="YES" dashSubstitution="YES" smartInsertDelete="YES" id="D5g-AM-3In">
                                             <rect key="frame" x="0.0" y="0.0" width="378" height="19"/>
@@ -1045,7 +1044,7 @@
                                             <rect key="frame" x="6" y="8" width="188" height="307"/>
                                             <clipView key="contentView" drawsBackground="NO" copiesOnScroll="NO" id="srb-OL-14h">
                                                 <rect key="frame" x="1" y="1" width="186" height="305"/>
-                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                <autoresizingMask key="autoresizingMask"/>
                                                 <subviews>
                                                     <tableView verticalHuggingPriority="750" tag="102" allowsExpansionToolTips="YES" columnAutoresizingStyle="firstColumnOnly" columnReordering="NO" autosaveColumns="NO" typeSelect="NO" rowHeight="20" viewBased="YES" floatsGroupRows="NO" id="3Qq-fI-A7Z">
                                                         <rect key="frame" x="0.0" y="0.0" width="186" height="305"/>
@@ -1234,7 +1233,7 @@
                                 <rect key="frame" x="2" y="2" width="379" height="479"/>
                                 <clipView key="contentView" id="c2c-PN-kWM">
                                     <rect key="frame" x="1" y="1" width="377" height="477"/>
-                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <tableView verticalHuggingPriority="750" tag="202" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" selectionHighlightStyle="none" alternatingRowBackgroundColors="YES" columnReordering="NO" columnResizing="NO" multipleSelection="NO" autosaveColumns="NO" typeSelect="NO" rowSizeStyle="automatic" viewBased="YES" id="zFV-wk-y0o">
                                             <rect key="frame" x="0.0" y="0.0" width="377" height="477"/>

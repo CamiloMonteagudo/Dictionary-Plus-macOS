@@ -79,7 +79,7 @@
   {
 //  NSString *AppName = [[NSProcessInfo processInfo] processName];
   
-  NSDictionary *Options = @{ @"ApplicationName":@"Dictionary Plus (En-It)"};
+  NSDictionary *Options = @{ @"ApplicationName":@"Dictionary Plus (En-Fr)"};
   
   [NSApp orderFrontStandardAboutPanelWithOptions:Options];
   }

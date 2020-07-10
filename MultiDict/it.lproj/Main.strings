@@ -3,7 +3,7 @@
 "01K-Zo-5y3.title" = "Significati";
 
 /* Class = "NSMenuItem"; title = "Translation Dictionary"; ObjectID = "1Xt-HY-uBw"; */
-"1Xt-HY-uBw.title" = "Dictionary Plus (En-It)";
+"1Xt-HY-uBw.title" = "Dictionary Plus (En-Fr)";
 
 /* Class = "NSMenu"; title = "Find"; ObjectID = "1b7-l0-nxx"; */
 "1b7-l0-nxx.title" = "Cerca";
@@ -24,13 +24,13 @@
 "4EN-yA-p0u.title" = "Cerca";
 
 /* Class = "NSMenuItem"; title = "Quit Translation Dictionary"; ObjectID = "4sb-4s-VLi"; */
-"4sb-4s-VLi.title" = "Esci da Dictionary Plus (En-It)";
+"4sb-4s-VLi.title" = "Esci da Dictionary Plus (En-Fr)";
 
 /* Class = "NSMenuItem"; title = "Edit"; ObjectID = "5QF-Oa-p0T"; */
 "5QF-Oa-p0T.title" = "Modifica";
 
 /* Class = "NSMenuItem"; title = "About Translation Dictionary"; ObjectID = "5kV-Vb-QxS"; */
-"5kV-Vb-QxS.title" = "Informazioni su Dictionary Plus (En-It)";
+"5kV-Vb-QxS.title" = "Informazioni su Dictionary Plus (En-Fr)";
 
 /* Class = "NSMenuItem"; title = "Redo"; ObjectID = "6dh-zS-Vam"; */
 "6dh-zS-Vam.title" = "Ripristina";
@@ -99,7 +99,7 @@
 "Nd3-kZ-Fxc.ibShadowedToolTip" = "Cancella tutti i dati dei significati";
 
 /* Class = "NSMenuItem"; title = "Hide Translation Dictionary"; ObjectID = "Olw-nP-bQN"; */
-"Olw-nP-bQN.title" = "Nascondi Dictionary Plus (En-It)";
+"Olw-nP-bQN.title" = "Nascondi Dictionary Plus (En-Fr)";
 
 /* Class = "NSMenuItem"; title = "Find Previous"; ObjectID = "OwM-mh-QMV"; */
 "OwM-mh-QMV.title" = "Cerca precedente";
@@ -297,7 +297,7 @@
 "uEc-Tj-fk0.title" = "Mostra solo le frasi con tutte le parole";
 
 /* Class = "NSMenu"; title = "Translation Dictionary"; ObjectID = "uQy-DD-JDr"; */
-"uQy-DD-JDr.title" = "Dictionary Plus (En-It)";
+"uQy-DD-JDr.title" = "Dictionary Plus (En-Fr)";
 
 /* Class = "NSMenuItem"; title = "Cut"; ObjectID = "uRl-iY-unG"; */
 "uRl-iY-unG.title" = "Taglia";
