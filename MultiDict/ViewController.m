@@ -367,6 +367,8 @@ static NSDictionary* attrWrd = @{ NSFontAttributeName:fontBold };
 - (void)tableViewSelectionDidChange:(NSNotification *)aNotification
   {
   int row = (int)_tableFrases.selectedRow;
+  if( row==-1 ) return;
+  
   int idx = SortEntries->Entries[row]->Index;
 
   [_ZonaDatos AddDatosAtIndex:idx];

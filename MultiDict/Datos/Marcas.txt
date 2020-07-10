@@ -1,99 +1,101 @@
 //Code  Descripción     Es                En                 It                  Fr 
-DD1  |Adverbio     |{todavía}          | {yet}             |{ancora}           |{Encore}   
-DD2  |Adverbio     |{allí}             | {there}           |{lì}               |{là}   
-DD3  |Adverbio     |{fácilmente}       | {easily}          |{facilmente}       |{facilement}   
-DD4  |Adverbio     |{todo}             | {all}             |{tutto}            |{tout}   
-DD5  |Adverbio     |{quizás}           | {maybe}           |{magari}           |{peut-être}   
-NA1  |Animal       |{perros}           |{perros}           |{perros}           |{perros}     
-GY1  |Año          |{2014}             |{2014}             |{2014}             |{2014}    
-GY2  |Año          |{2016}             |{2016}             |{2016}             |{2016}    
-GY3  |Año          |{90}               |{90}               |{90}               |{90}
-PN1  |Apellido     |{Smith}            |{Smith}            |{Smith}            |{Smith}    
-NCa1 |Carro        |{Ferrari}          |{Ferrari}          |{Ferrari}          |{Ferrari}
-CO1  |Comida       |{pizza}            |{pizza}            |{pizza}            |{pizza}
-NS1  |Día          |{Martes}           |{Tuesday}          |{Martedì}          |{Mardi}    
-NS2  |Día          |{Lunes}            |{Monday}           |{Lunedì}           |{Lundi}    
-CD1  |Dinero       |{$100}             |{$100}             |{$100}             |{$100}    
-DE1  |Dispositivo  |{iPhone}           |{iPhone}           |{iPhone}           |{iPhone}
-DE2  |Dispositivo  |{computadora}      |{computer}         |{computadora}      |{computadora}
-NE1  |Empresa      |{Twitter}          |{Twitter}          |{Twitter}          |{Twitter}
-NE2  |Empresa      |{Internet}         |{Internet}         |{Internet}         |{Internet}
-MK1  |Empresa      |{Sony}             |{Sony}             |{Sony}             |{Sony}
-NU1  |Escuela      |{Harvard}          |{Harvard}          |{Harvard}          |{Harvard}
-FC1  |Fecha        |{15-05-2010}       |{15-05-2010}       |{15-05-2010}       |{15-05-2010}
-FC2  |Fecha        |{25-10-2016}       |{25-10-2016}       |{25-10-2016}       |{25-10-2016}
-FT1  |Formato      |{Texto}            |{Text}             |{Testo}            |{Texte}
-GT1  |Gentilicio   |{Alemanes}         |{Germans}          |{Tedeschi}         |{Allemands}      
-GP1  |Grupo        |{The Beetles}      |{The Beetles}      |{The Beetles}      |{The Beetles}      
-HR1  |Hora         |{10}               |{10}               |{10}               |{10}      
-HR2  |Hora         |{12}               |{12}               |{12}               |{12}      
-HR3  |Hora         |{8:30}             |{8:30}             |{8:30}             |{8:30}
-NL1  |Idioma       |{Inglés}           |{English}          |{Inglese}          |{Anglais}  
-NL2  |Idioma       |{Español}          |{Spanish}          |{spagnolo}         |{Espagnol} 
-NL3  |Idioma       |{Italiano}         |{Italian}          |{Italian}          |{Italian}
-NL4  |Idioma       |{Japonés}          |{Japanese}         |{Japonais}         |{Giapponese}
-NL5  |Idioma       |{Chino}            |{Chinese}          |{Chinois}          |{Cinese}
-PL1  |Lenguaje     |{Java}             |{Java}             |{Java}             |{Java}         
-LB1  |Libro        |{Romeo y Julieta}  |{Romea and Juliet} |{Romea e Giulietta}|{Roméo et Julirte}
-LN1  |Lugar        |{Madrid}           |{Madrid}           |{Madrid}           |{Madrid}   
-LN2  |Lugar        |{Barcelona}        |{Barcelona}        |{Barcellona}       |{Barcelone}
-LN3  |Lugar        |{España}           |{Spain}            |{Spagna}           |{Espagne}
-LN4  |Lugar        |{Italia}           |{Italy}            |{Italia}           |{Italia}
-LN5  |Lugar        |{China}            |{China}            |{la Chine}         |{Cina}
-LN6  |Lugar        |{Japon}            |{Japan}            |{le Japon}         |{Giappone}
-LN7  |Lugar        |{Mexico}           |{Mexico}           |{Mexico}           |{Mexico}
-LN8  |Lugar        |{Estados Unidos}   |{United States}    |{United States}    |{United States}
-NL7  |Lugar        |{Torre de Eiffel}  |{Eiffel's Tower}   |{Torre de Eiffel}  |{Torre de Eifflel}
-NL8  |Lugar        |{Museo}            |{Museum}           |{Musée}            |{Museo}
-NL9  |Lugar        |{el teatro}        |{the theater}      |{il teatro}        |{le thétre}
-LH1  |Lugar        |{apartamento}      |{apartment}        |{appartamento}     |{appartement}
-NN1  |Número       |{8}                |{8}                |{8}                |{8}        
-NN2  |Número       |{1}                |{1}                |{1}                |{1}        
-NN3  |Número       |{4}                |{4}                |{4}                |{4}        
-NN4  |Número       |{7}                |{7}                |{7}                |{7}        
-NN5  |Numero       |{2}                |{2}                |{2}                |{2}
-NN6  |Numero       |{20}               |{20}               |{20}               |{20}
-NN7  |Numero       |{100}              |{100}              |{100}              |{100}
-NN8  |Numero       |{999}              |{999}              |{999}              |{999}
-NC1  |Nro Cardinal |{7ma}              |{7th}              |{7ma}              |{7ma}     
-LL1  |Nro Romano   |{III}              |{III}              |{III}              |{III}     
-LL2  |Nro Romano   |{IV}               |{IV}               |{IV}               |{IV}      
-NM1  |Mes          |{Enero}            |{January}          |{Gennaio}          |{Janvier}  
-NM2  |Mes          |{Marzo}            |{March}            |{Marzo}            |{Mars}     
-NM3  |Mes          |{Agosto}           |{Agosto}           |{Agosto}           |{Agosto}   
-MD1  |Moneda       |{Dolar}            |{Dollar}           |{Dolar}            |{Dollar}
-MD2  |Moneda       |{Euro}             |{Euro}             |{Euro}             |{Euro}
-NO1  |Objeto       |{manzanas}         |{apples}           |{mele}             |{pomme}   
-NO2  |Objeto       |{tren}             |{train}            |{treno}            |{train}
-NO3  |Objeto       |{huevo}            |{egg}              |{uovo}             |{oeuf}
-NO4  |Objeto       |{Frutas}           |{Fruits}           |{Frutta}           |{Fruits}
-PW1  |Página Web   |{www.facebook.com} |{www.facebook.com} |{www.facebook.com} |{www.facebook.com}
-WD1  |Palabra      |{jugar}            |{play}             |{giocare}          |{jouer}   
-WD2  |Palabra      |{trabajar}         |{work}             |{lavorare}         |{labourer}
-WD3  |Palabra      |{Aniversario}      |{Anniversary}      |{Anniversario}     |{Anniversarie}
-WD4  |Palabra      |{Trabajo}          |{Work}             |{Lavoro}           |{Travail}
-WD5  |Palabra      |{Reunión}          |{Meeting}          |{Riunioni}         |{Réunion}
-WD6  |Palabra      |{Fútbol}           |{Football}         |{Football}         |{Football}
-NP1  |Persona      |{Juan}             |{John}             |{Giovanni}         |{Jean}     
-NP2  |Persona      |{Maria}            |{Mary}             |{Maria}            |{Marie}    
-NP3  |Persona      |{Pedro}            |{Peter}            |{Pietro}           |{Pierre}   
-NP4  |Persona      |{Ana}              |{Anna}             |{Ana}              |{Ana}      
-NP5  |Persona      |{Juanito}          |{Johnny}           |{Johnny}           |{Johnny}     
-NPl1 |Planeta      |{Tierra}           |{Earth}            |{Tierra}           |{Tierra}
-NPl2 |Planeta      |{la Luna}          |{the Moon}         |{la Lune}          |{la Luna}
-NPl3 |Planeta      |{Jupiter}          |{Jupiter}          |{Jupiter}          |{Giove}
-PC1  |Porciento    |{50%}              |{50%}              |{50%}              |{50%}
-PR1  |Profesión    |{taxista}          |{taxi driver}      |{tassista}         |{chauffeur de taxi}
-PR2  |Profesión    |{químico}          |{chemist}          |{químico}          |{químico}
-PF1  |Profeción    |{Ingeniero}        |{Engineer}         |{Ingegnere}        |{Ingénieur}
-SN1  |Sustancia    |{Peligrosas}       |{Dangerous}        |{Pericoloso}       |{Dangereux}
-CS1  |Tamaño       |{25}               |{25}               |{25}               |{25}         
-CS2  |Tamaño       |{Pequeño}          |{Small}            |{Piccolo}          |{Petit}
-TM1  |Tiempo       |{Noche}            |{Night}            |{Notte}            |{Nuit}
-NT1  |Teléfono     |{9348529}          |{9348529}          |{9348529}          |{9348529}
-NR1  |Rio          |{Missipi}          |{Missipi}          |{Missipi}          |{Missipi}
-ST1  |Estado       |{Saludable}        |{healthy}          |{sano}             |{salutaire}
-EC1  |Estado       |{soltero}          |{single}           |{single}           |{célibataire}
+DD1  |Adverbio     |{todavía}             |{yet}                |{ancora}             |{encore}   
+DD2  |Adverbio     |{allí}                |{there}              |{lì}                 |{là}   
+DD3  |Adverbio     |{fácilmente}          |{easily}             |{facilmente}         |{facilement}   
+DD4  |Adverbio     |{todo}                |{all}                |{tutto}              |{tout}   
+DD5  |Adverbio     |{quizás}              |{maybe}              |{magari}             |{peut-être}   
+NA1  |Animal       |{perros}              |{dogs}               |{cani}               |{chiens}     
+GY1  |Año          |{2014}                |{2014}               |{2014}               |{2014}    
+GY2  |Año          |{2016}                |{2016}               |{2016}               |{2016}    
+GY3  |Año          |{90}                  |{90}                 |{90}                 |{90}
+PN1  |Apellido     |{Smith}               |{Smith}              |{Smith}              |{Smith}    
+NCa1 |Carro        |{Ferrari}             |{Ferrari}            |{Ferrari}            |{Ferrari}
+CO1  |Comida       |{pizza}               |{pizza}              |{pizza}              |{pizza}
+CO2  |Comida       |{té}                  |{tea}                |{tè}                 |{thé}
+NS1  |Día          |{martes}              |{tuesday}            |{martedì}            |{mardi}    
+NS2  |Día          |{lunes}               |{monday}             |{lunedì}             |{lundi}    
+CD1  |Dinero       |{$100}                |{$100}               |{$100}               |{$100}    
+DE1  |Dispositivo  |{iPhone}              |{iPhone}             |{iPhone}             |{iPhone}
+DE2  |Dispositivo  |{computadora}         |{computer}           |{computadora}        |{computadora}
+NE1  |Empresa      |{Twitter}             |{Twitter}            |{Twitter}            |{Twitter}
+NE2  |Empresa      |{Internet}            |{Internet}           |{Internet}           |{Internet}
+MK1  |Empresa      |{Sony}                |{Sony}               |{Sony}               |{Sony}
+NU1  |Escuela      |{Harvard}             |{Harvard}            |{Harvard}            |{Harvard}
+FC1  |Fecha        |{15-05-2010}          |{15-05-2010}         |{15-05-2010}         |{15-05-2010}
+FC2  |Fecha        |{25-10-2016}          |{25-10-2016}         |{25-10-2016}         |{25-10-2016}
+FT1  |Formato      |{texto}               |{text}               |{testo}              |{texte}
+GT1  |Gentilicio   |{alemanes}            |{germans}            |{tedeschi}           |{allemands}      
+GP1  |Grupo        |{los Beatles}         |{The Beatles}        |{i Beatles}          |{les Beatles}      
+HR1  |Hora         |{10}                  |{10}                 |{10}                 |{10}      
+HR2  |Hora         |{12}                  |{12}                 |{12}                 |{12}      
+HR3  |Hora         |{8:30}                |{8:30}               |{8:30}               |{8:30}
+NL1  |Idioma       |{inglés}              |{english}            |{inglese}            |{anglais}  
+NL2  |Idioma       |{español}             |{spanish}            |{spagnolo}           |{espagnol} 
+NL3  |Idioma       |{italiano}            |{italian}            |{italian}            |{italian}
+NL4  |Idioma       |{japonés}             |{japanese}           |{giapponese}         |{japonais}
+NL5  |Idioma       |{chino}               |{chinese}            |{chinois}            |{cinese}
+PL1  |Lenguaje     |{java}                |{java}               |{java}               |{java}         
+LB1  |Libro        |{Romeo y Julieta}     |{Romea and Juliet}   |{Romea e Giulietta}  |{Roméo et Julirte}
+LN1  |Lugar        |{Madrid}              |{Madrid}             |{Madrid}             |{Madrid}   
+LN2  |Lugar        |{Barcelona}           |{Barcelona}          |{Barcellona}         |{Barcelone}
+LN3  |Lugar        |{España}              |{Spain}              |{Spagna}             |{Espagne}
+LN4  |Lugar        |{Italia}              |{Italy}              |{Italia}             |{Italia}
+LN5  |Lugar        |{China}               |{China}              |{la Chine}           |{Cina}
+LN6  |Lugar        |{Japon}               |{Japan}              |{le Japon}           |{Giappone}
+LN7  |Lugar        |{Mexico}              |{Mexico}             |{Mexico}             |{Mexico}
+LN8  |Lugar        |{Estados Unidos}      |{United States}      |{United States}      |{États - Unis}
+NL7  |Lugar        |{la Torre de Eiffel}  |{the Eiffel's Tower} |{la Torre de Eiffel} |{la Tour de Eifflel}
+NL8  |Lugar        |{museo}               |{museum}             |{musée}              |{museo}
+NL9  |Lugar        |{el teatro}           |{the theater}        |{il teatro}          |{le thétre}
+LH1  |Lugar        |{apartamento}         |{apartment}          |{appartamento}       |{appartement}
+NN1  |Número       |{8}                   |{8}                  |{8}                  |{8}        
+NN2  |Número       |{1}                   |{1}                  |{1}                  |{1}        
+NN3  |Número       |{4}                   |{4}                  |{4}                  |{4}        
+NN4  |Número       |{7}                   |{7}                  |{7}                  |{7}        
+NN5  |Numero       |{2}                   |{2}                  |{2}                  |{2}
+NN6  |Numero       |{20}                  |{20}                 |{20}                 |{20}
+NN7  |Numero       |{100}                 |{100}                |{100}                |{100}
+NN8  |Numero       |{999}                 |{999}                |{999}                |{999}
+NC1  |Nro Cardinal |{7ma}                 |{7th}                |{7ma}                |{7ma}     
+LL1  |Nro Romano   |{III}                 |{III}                |{III}                |{III}     
+LL2  |Nro Romano   |{IV}                  |{IV}                 |{IV}                 |{IV}      
+NM1  |Mes          |{enero}               |{january}            |{gennaio}            |{janvier}  
+NM2  |Mes          |{marzo}               |{march}              |{marzo}              |{mars}     
+NM3  |Mes          |{agosto}              |{august}             |{agosto}             |{août}   
+MD1  |Moneda       |{dolar}               |{dollar}             |{dollaro}            |{dollar}
+MD2  |Moneda       |{euro}                |{euro}               |{euro}               |{euro}
+NO1  |Objeto       |{manzanas}            |{apples}             |{mele}               |{pomme}   
+NO2  |Objeto       |{tren}                |{train}              |{treno}              |{train}
+NO3  |Objeto       |{huevo}               |{egg}                |{uovo}               |{oeuf}
+NO4  |Objeto       |{frutas}              |{fruits}             |{frutta}             |{fruits}
+PW1  |Página Web   |{www.facebook.com}    |{www.facebook.com}   |{www.facebook.com}   |{www.facebook.com}
+WD1  |Palabra      |{jugar}               |{play}               |{giocare}            |{jouer}   
+WD2  |Palabra      |{trabajar}            |{Work}               |{lavorare}           |{labourer}
+WD3  |Palabra      |{aniversario}         |{anniversary}        |{anniversario}       |{anniversarie}
+WD4  |Palabra      |{trabajo}             |{work}               |{lavoro}             |{travail}
+WD5  |Palabra      |{reunión}             |{meeting}            |{riunioni}           |{réunion}
+WD6  |Palabra      |{fútbol}              |{football}           |{football}           |{football}
+NP1  |Persona      |{Juan}                |{John}               |{Giovanni}           |{Jean}     
+NP2  |Persona      |{Maria}               |{Mary}               |{Maria}              |{Marie}    
+NP3  |Persona      |{Pedro}               |{Peter}              |{Pietro}             |{Pierre}   
+NP4  |Persona      |{Ana}                 |{Anna}               |{Ana}                |{Ana}      
+NP5  |Persona      |{Juanito}             |{Johnny}             |{Johnny}             |{Johnny}     
+NPl1 |Planeta      |{tierra}              |{earth}              |{tierra}             |{tierra}
+NPl2 |Planeta      |{la Luna}             |{the Moon}           |{la Lune}            |{la Luna}
+NPl3 |Planeta      |{Jupiter}             |{Jupiter}            |{Giove}              |{Jupiter}
+PC1  |Porciento    |{50%}                 |{50%}                |{50%}                |{50%}
+PR1  |Profesión    |{taxista}             |{taxi driver}        |{tassista}           |{chauffeur de taxi}
+PR2  |Profesión    |{químico}             |{chemist}            |{químico}            |{químico}
+PF1  |Profeción    |{ingeniero}           |{engineer}           |{ingegnere}          |{ingénieur}
+SN1  |Sustancia    |{peligrosas}          |{dangerous}          |{pericoloso}         |{dangereux}
+CS1  |Tamaño       |{25}                  |{25}                 |{25}                 |{25}         
+CS2  |Tamaño       |{pequeño}             |{small}              |{piccolo}            |{petit}
+TM1  |Tiempo       |{noche}               |{night}              |{notte}              |{nuit}
+NT1  |Teléfono     |{9348529}             |{9348529}            |{9348529}            |{9348529}
+NR1  |Rio          |{Missipi}             |{Missipi}            |{Missipi}            |{Missipi}
+ST1  |Estado       |{saludable}           |{healthy}            |{sano}               |{salutaire}
+EC1  |Estado       |{soltero}             |{single}             |{single}             |{célibataire}
+CL1  |Color        |{azul}                |{blue}               |{blu}                |{bleu}
 
 
 

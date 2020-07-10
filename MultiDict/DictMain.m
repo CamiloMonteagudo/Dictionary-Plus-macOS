@@ -34,7 +34,7 @@
 
   BOOL ret = [Dict LoadWithSrc:src AndDes:des];
 
-  //NSLog(@"ENTRADAS: Tiempo de carga = %lf", [crono GetTime]);
+  NSLog(@"ENTRADAS: Tiempo de carga = %lf", [crono GetTime]);
 
   return ret;
   }

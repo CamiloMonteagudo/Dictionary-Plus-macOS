@@ -35,7 +35,7 @@
 
   BOOL ret = [DictIdx LoadWithSrc:src AndDes:des];
 
-  //NSLog(@"INDICE: tiempo de carga = %lf", [crono GetTime]);
+  NSLog(@"INDICE: tiempo de carga = %lf", [crono GetTime]);
 
   return ret;
   }

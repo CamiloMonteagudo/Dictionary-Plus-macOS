@@ -114,13 +114,13 @@
 // Se al dar click sobre el botón para adicionar una nueva conjugación
 - (IBAction)OnAddConjs:(NSButton *)sender
   {
-  [ConjCore LoadConjLang: LGSrc];                           // Carga la conjugación para el idioma actual
+  [ConjCore LoadConjLang: LGSrc];                               // Carga la conjugación para el idioma actual
 
   NSString* Verb = _ConjVerb.stringValue;
 
-  if( [ConjCore ConjVerb:Verb ] )                              // Si la palabra se puede conjugar
+  if( [ConjCore ConjVerb:Verb ] )                               // Si la palabra se puede conjugar
     {
-    NSArray<NSString*> * Wrds = [ConjCore GetConjsList];      // Obtiene la lista de palabras de la conjugacion
+    NSArray<NSString*> * Wrds = [ConjCore GetConjsList];        // Obtiene la lista de palabras de la conjugacion
 
     for (NSString* wrd in Wrds)
       {
@@ -149,7 +149,8 @@
 // Se al dar click sobre el botón para adicionar una nueva palabra
 - (IBAction)OnAddNewWord:(NSButton *)sender
   {
-  NSString* Wrd = _NewWord.stringValue;
+  NSString* Wrd = [_NewWord.stringValue lowercaseString];
+  
   if( Wrd.length == 0 )
     {
     [self ShowMsg:@"WriteNewWord" WithTitle:@"TitleFindPlus"];
@@ -250,8 +251,12 @@
 
     if( n==1 && idx0==0 ) _btnDelWords.hidden = TRUE;
     else                  _btnDelWords.hidden = FALSE;
+    
+    
+    NSInteger idx = _SinonTable.selectedRowIndexes.firstIndex;
+    _NewWord.stringValue = Words[idx];
     }
-  else                    _btnDelWords.hidden = TRUE;
+  else _btnDelWords.hidden = TRUE;
   }
 
 //--------------------------------------------------------------------------------------------------------------------------------------------------------

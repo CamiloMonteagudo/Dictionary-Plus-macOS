@@ -68,6 +68,7 @@ static int _InstDes[]  = {   0,    1 };
 static int _InstConj[] = { 0, 1 };
 */
 
+/*
 // (Es-It)
 //                        EsIt,  ItEs
 static int _InstSrc[]  = {   0,    2 };
@@ -75,6 +76,15 @@ static int _InstDes[]  = {   2,    0 };
 
 //                        Es, It
 static int _InstConj[] = { 0, 2 };
+*/
+
+// (Es-Fr)
+//                        EsFr,  FrEs
+static int _InstSrc[]  = {   0,    3 };
+static int _InstDes[]  = {   3,    0 };
+
+//                        Es, It
+static int _InstConj[] = { 0, 3 };
 
 
 //---------------------------------------------------------------------------------------------------------------------------------------------------------------------------

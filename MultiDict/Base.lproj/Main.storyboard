@@ -350,9 +350,9 @@
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <textField autoresizesSubviews="NO" horizontalHuggingPriority="251" verticalHuggingPriority="750" setsMaxLayoutWidthAtFirstLayout="YES" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qrI-mX-6zN" userLabel="lbBuscar">
-                                <rect key="frame" x="2" y="674" width="59" height="17"/>
+                                <rect key="frame" x="2" y="674" width="84" height="17"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="55" id="Vqu-bN-vFq"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="80" id="Vqu-bN-vFq"/>
                                     <constraint firstAttribute="height" constant="17" id="oe1-da-RUD"/>
                                 </constraints>
                                 <textFieldCell key="cell" allowsUndo="NO" sendsActionOnEndEditing="YES" alignment="right" title="Find:" id="qMK-Xr-igO">
@@ -362,7 +362,7 @@
                                 </textFieldCell>
                             </textField>
                             <searchField wantsLayer="YES" verticalHuggingPriority="750" tag="100" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2aa-vJ-rpd" userLabel="EditFrase">
-                                <rect key="frame" x="62" y="671" width="607" height="22"/>
+                                <rect key="frame" x="87" y="671" width="582" height="22"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="22" id="yEW-0j-pMp"/>
                                 </constraints>
@@ -625,7 +625,7 @@
                                                         <scrollView horizontalLineScroll="10" horizontalPageScroll="40" verticalLineScroll="10" verticalPageScroll="40" hasHorizontalScroller="NO" horizontalScrollElasticity="none" translatesAutoresizingMaskIntoConstraints="NO" id="UVS-ze-XiF" userLabel="Scroll Datos">
                                                             <rect key="frame" x="2" y="0.0" width="742" height="631"/>
                                                             <clipView key="contentView" copiesOnScroll="NO" id="cXM-mj-aAI">
-                                                                <rect key="frame" x="1" y="1" width="740" height="629"/>
+                                                                <rect key="frame" x="1" y="1" width="725" height="629"/>
                                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                                 <subviews>
                                                                     <view focusRingType="none" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4WZ-DZ-eZo" userLabel="ZonaDatos" customClass="ZoneDatosView">
@@ -639,7 +639,7 @@
                                                                 <autoresizingMask key="autoresizingMask"/>
                                                             </scroller>
                                                             <scroller key="verticalScroller" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="h6M-7A-Y3r">
-                                                                <rect key="frame" x="725" y="1" width="16" height="629"/>
+                                                                <rect key="frame" x="726" y="1" width="15" height="629"/>
                                                                 <autoresizingMask key="autoresizingMask"/>
                                                             </scroller>
                                                         </scrollView>
@@ -982,7 +982,7 @@
                                 </connections>
                             </button>
                             <button identifier="TipFrasesAll" toolTip="The number of words found must be equal to the number of words in the phrase" translatesAutoresizingMaskIntoConstraints="NO" id="cfL-y3-NJs">
-                                <rect key="frame" x="8" y="37" width="384" height="18"/>
+                                <rect key="frame" x="8" y="44" width="384" height="18"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="14" id="KWe-2W-x6n"/>
                                 </constraints>
@@ -992,9 +992,9 @@
                                 </buttonCell>
                             </button>
                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="oDu-1X-WiZ">
-                                <rect key="frame" x="234" y="3" width="81" height="32"/>
+                                <rect key="frame" x="172" y="3" width="112" height="32"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="69" id="KYP-N9-pae"/>
+                                    <constraint firstAttribute="width" constant="100" id="KYP-N9-pae"/>
                                     <constraint firstAttribute="height" constant="21" id="LhV-ZK-3p0"/>
                                 </constraints>
                                 <buttonCell key="cell" type="push" title="Find" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="s5A-XT-JOe">
@@ -1006,9 +1006,9 @@
                                 </connections>
                             </button>
                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="CXi-hH-G0Y">
-                                <rect key="frame" x="315" y="3" width="81" height="32"/>
+                                <rect key="frame" x="284" y="3" width="112" height="32"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="69" id="YrR-on-A41"/>
+                                    <constraint firstAttribute="width" constant="100" id="YrR-on-A41"/>
                                     <constraint firstAttribute="height" constant="21" id="wyn-iW-f1u"/>
                                 </constraints>
                                 <buttonCell key="cell" type="push" title="Close" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="7qh-Of-pWW">
@@ -1020,13 +1020,13 @@
                                 </connections>
                             </button>
                             <box borderType="line" title="Box" titlePosition="noTitle" translatesAutoresizingMaskIntoConstraints="NO" id="WeP-3g-Q2R">
-                                <rect key="frame" x="2" y="57" width="396" height="330"/>
+                                <rect key="frame" x="2" y="64" width="396" height="323"/>
                                 <view key="contentView" id="f0x-AY-8N7">
-                                    <rect key="frame" x="1" y="1" width="394" height="328"/>
+                                    <rect key="frame" x="1" y="1" width="394" height="321"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
                                         <button identifier="TipDelSelWord" toolTip="Remove the word selected from the list" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="955-0h-fbh">
-                                            <rect key="frame" x="192" y="294" width="92" height="32"/>
+                                            <rect key="frame" x="192" y="287" width="92" height="32"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="21" id="Y07-W6-ZwZ"/>
                                                 <constraint firstAttribute="width" constant="80" id="h59-kn-GHG"/>
@@ -1040,7 +1040,7 @@
                                             </connections>
                                         </button>
                                         <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YOj-Fv-jzN" userLabel="lbFormas del verbo">
-                                            <rect key="frame" x="196" y="179" width="144" height="17"/>
+                                            <rect key="frame" x="196" y="176" width="144" height="17"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="17" id="KHP-7E-njZ"/>
                                                 <constraint firstAttribute="width" constant="140" id="jLg-ZU-ey3"/>
@@ -1052,7 +1052,7 @@
                                             </textFieldCell>
                                         </textField>
                                         <button identifier="TipAddAllConjs" toolTip="Add to the list all verb forms" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="uYU-6w-hXb" userLabel="AddFrmsVerb">
-                                            <rect key="frame" x="295" y="122" width="97" height="32"/>
+                                            <rect key="frame" x="295" y="119" width="97" height="32"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="21" id="Kh4-7L-8iz"/>
                                                 <constraint firstAttribute="width" constant="85" id="wtM-k7-2hn"/>
@@ -1106,7 +1106,7 @@
                                             </connections>
                                         </button>
                                         <textField verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ehb-0n-mOb" userLabel="Verbo">
-                                            <rect key="frame" x="198" y="153" width="188" height="24"/>
+                                            <rect key="frame" x="198" y="150" width="188" height="24"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="24" id="vad-Jv-GgE"/>
                                             </constraints>
@@ -1120,13 +1120,13 @@
                                             </connections>
                                         </textField>
                                         <scrollView autohidesScrollers="YES" horizontalLineScroll="20" horizontalPageScroll="10" verticalLineScroll="20" verticalPageScroll="10" horizontalScrollElasticity="none" translatesAutoresizingMaskIntoConstraints="NO" id="mCl-Be-TsU" userLabel="Words List">
-                                            <rect key="frame" x="6" y="8" width="188" height="314"/>
+                                            <rect key="frame" x="6" y="8" width="188" height="307"/>
                                             <clipView key="contentView" drawsBackground="NO" copiesOnScroll="NO" id="srb-OL-14h">
-                                                <rect key="frame" x="1" y="1" width="186" height="312"/>
+                                                <rect key="frame" x="1" y="1" width="186" height="305"/>
                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                 <subviews>
                                                     <tableView verticalHuggingPriority="750" tag="102" allowsExpansionToolTips="YES" columnAutoresizingStyle="firstColumnOnly" columnReordering="NO" autosaveColumns="NO" typeSelect="NO" rowHeight="20" viewBased="YES" floatsGroupRows="NO" id="3Qq-fI-A7Z">
-                                                        <rect key="frame" x="0.0" y="0.0" width="186" height="312"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="186" height="305"/>
                                                         <autoresizingMask key="autoresizingMask"/>
                                                         <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
                                                         <color key="gridColor" name="gridColor" catalog="System" colorSpace="catalog"/>
@@ -1219,7 +1219,7 @@
                         <constraints>
                             <constraint firstItem="oDu-1X-WiZ" firstAttribute="centerY" secondItem="CXi-hH-G0Y" secondAttribute="centerY" id="0i8-Hu-tpa"/>
                             <constraint firstItem="YGj-tP-tjR" firstAttribute="top" secondItem="oRZ-pO-pzw" secondAttribute="bottom" id="1TL-S1-g7C"/>
-                            <constraint firstItem="CXi-hH-G0Y" firstAttribute="top" secondItem="cfL-y3-NJs" secondAttribute="bottom" constant="8" id="4Cr-nU-Mht"/>
+                            <constraint firstItem="CXi-hH-G0Y" firstAttribute="top" secondItem="cfL-y3-NJs" secondAttribute="bottom" constant="15" id="4Cr-nU-Mht"/>
                             <constraint firstItem="WeP-3g-Q2R" firstAttribute="leading" secondItem="Ghg-sZ-Nm4" secondAttribute="leading" constant="5" id="4bM-RD-Vqe"/>
                             <constraint firstAttribute="trailing" secondItem="cfL-y3-NJs" secondAttribute="trailing" constant="10" id="8am-dP-duz"/>
                             <constraint firstItem="CXi-hH-G0Y" firstAttribute="leading" secondItem="oDu-1X-WiZ" secondAttribute="trailing" constant="12" id="Bdy-5u-9jF"/>
@@ -1270,7 +1270,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <searchField wantsLayer="YES" verticalHuggingPriority="750" tag="200" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ALh-Pi-gPX" userLabel="ConjVerb">
-                                <rect key="frame" x="2" y="572" width="313" height="22"/>
+                                <rect key="frame" x="2" y="572" width="273" height="22"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="22" id="fdG-yV-kg7"/>
                                 </constraints>
@@ -1284,9 +1284,9 @@
                                 </connections>
                             </searchField>
                             <button identifier="TipCloseConj" toolTip="Closes view conjugations" verticalHuggingPriority="750" tag="201" allowsExpansionToolTips="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zsx-EF-pnH" userLabel="BntClose">
-                                <rect key="frame" x="315" y="564" width="72" height="35"/>
+                                <rect key="frame" x="275" y="564" width="112" height="35"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="60" id="Ade-9d-c0W"/>
+                                    <constraint firstAttribute="width" constant="100" id="Ade-9d-c0W"/>
                                     <constraint firstAttribute="height" constant="24" id="tAh-BZ-Bt4"/>
                                 </constraints>
                                 <buttonCell key="cell" type="push" title="Close" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="V2i-19-ZiG">
