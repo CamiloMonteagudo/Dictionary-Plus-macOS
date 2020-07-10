@@ -1,0 +1,65 @@
+"UILang" = "3";
+
+"WinTitle"       = "Dictionnaire de Traduction";
+"TitleFindMeans" = "Recherche de significations";           
+"NoFindWrd"      = "Le mot n'est pas dans le dictionnaire";              
+"NoFindWrdEntry" = "Il n'y a pas d'entrée dans le dictionnaire pour ce mot"; 
+
+"TitleConj"     = "Conjugaisons";
+"NoVerbInQuery" = "Aucun verbe n'a été trouvé dans la boîte de requête";                     
+
+"TitleFindPlus" = "Recherche avancée";
+"NoStringFind"  = "Ecrire le mot ou la phrase à rechercher";   
+"WriteNewWord"  = "Ecrire un mot similaire à celui sélectionné";
+"WordExist"     = "Le mot existe déjà";     
+"WordNoVerb"    = "Le mot n'est pas un verbe";
+
+"ConjLabel"       = "Conjugaisons";
+"ConjViewWords"   = "Par des mots"; 
+"ConjViewModes"   = "Par modes";    
+"ConjViewPersons" = "Par des gens";
+
+"Sustituciones" = "Remplacement";
+"DictChaged"    = "* Le dictionnaire a changé";                             
+"NoInDict"      = "* Le mot n'est pas dans le dictionnaire";                   
+"SustWord"      = "Mot: ";
+
+"Adverbio"     = "Adverbe";
+"Animal"       = "Animal";
+"Año"          = "Année";
+"Apellido"     = "Non de famille";
+"Carro"        = "Véhicule";
+"Comida"       = "Nourriture";
+"Día"          = "Jour";
+"Dinero"       = "Argent";
+"Dispositivo"  = "Dispositif";
+"Empresa"      = "Entreprise";
+"Escuela"      = "École";
+"Fecha"        = "Date";
+"Formato"      = "Format";
+"Gentilicio"   = "Gentile";
+"Grupo"        = "Groupe";
+"Hora"         = "Heure";
+"Idioma"       = "Langue";
+"Lenguaje"     = "Langage";
+"Libro"        = "Livre";
+"Lugar"        = "Lieu";
+"Número"       = "Nombre";
+"Nro Cardinal" = "# Cardinal";
+"Nro Romano"   = "# Romain";
+"Mes"          = "Mois";
+"Moneda"       = "Monnaie";
+"Objeto"       = "Objet";
+"Página Web"   = "Page web";
+"Palabra"      = "Mot";
+"Persona"      = "Personne";
+"Planeta"      = "Planète";
+"Porciento"    = "Pour cent";
+"Profesión"    = "Profession";
+"Sustancia"    = "Sustance";
+"Tamaño"       = "Taille";
+"Tiempo"       = "Temps";
+"Teléfono"     = "Téléphone";
+"Rio"          = "Riviére";
+"Estado"       = "État";
+"Color"        = "Couleur";
