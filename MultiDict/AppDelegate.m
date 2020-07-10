@@ -13,6 +13,7 @@
 //===================================================================================================================================================
 @interface AppDelegate ()
   {
+  id Observer;
   }
 
 @end
@@ -78,7 +79,7 @@
   {
 //  NSString *AppName = [[NSProcessInfo processInfo] processName];
   
-  NSDictionary *Options = @{ @"ApplicationName":@"Dictionary Plus (It-Fr)"};
+  NSDictionary *Options = @{ @"ApplicationName":@"Dictionary Plus (Italian Pack)"};
   
   [NSApp orderFrontStandardAboutPanelWithOptions:Options];
   }

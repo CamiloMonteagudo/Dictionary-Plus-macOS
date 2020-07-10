@@ -425,11 +425,11 @@ static NSDictionary* attrWrd = @{ NSFontAttributeName:fontBold };
 // Se llama antes de llamar otro viewController validar si se debe mostrar
 - (BOOL)shouldPerformSegueWithIdentifier:(NSString *)identifier sender:(id)sender
   {
-  if( [identifier isEqualToString:@"FindPlus"] && _txtFrase.stringValue.length==0 )
-    {
-    [self ShowMsg:@"NoStringFind" WithTitle:@"TitleFindPlus"];
-    return FALSE;
-    }
+//  if( [identifier isEqualToString:@"FindPlus"] && _txtFrase.stringValue.length==0 )
+//    {
+//    [self ShowMsg:@"NoStringFind" WithTitle:@"TitleFindPlus"];
+//    return FALSE;
+//    }
 
   return TRUE;
   }

@@ -54,6 +54,8 @@
   {
   Words = [NSMutableArray new];
 
+  _txtQuery.font = [NSFont systemFontOfSize:14];
+  
   [super viewDidLoad];
 
   _txtQuery.string =  _FindText;
